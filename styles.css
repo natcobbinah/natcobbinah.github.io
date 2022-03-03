@@ -1,0 +1,187 @@
+html{
+    font-size: 16px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+}
+
+.container{
+    display: grid;
+    grid-template: 100px 3fr 0.5fr 3fr 0.5fr 3fr 3fr 100px/ repeat(12, 1fr);
+    gap: 15px;
+}
+
+header{
+    display: grid;
+    align-content: center;
+    grid-column: 1 / span 12;
+    background-color: #472010;
+    padding: 0 1rem;
+}
+
+header nav{
+    display: grid;
+    grid-column: 9 / span 3;
+}
+
+header .logoTitle{
+    font-size: 2rem;
+    color: #fff;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner{
+    display: grid;
+    grid-column: 1 / span 12;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YnVzaW5lc3MlMjB3aXRoJTIwY29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=60 1200w");
+    background-size: cover;
+}
+
+.banner p{
+    font-size: 1.5rem;
+    color: #E7410E;
+    font-style: italic;
+    width: 75%;
+    text-align: center;
+}
+
+.about{
+    display: grid;
+    grid-column:  1 / span 12;
+    justify-content: center;
+    align-items: center;
+    background-color: #E7410E;
+}
+
+.development-services{
+    display: grid;
+    grid-column: 1 / span 4;
+    justify-items: center;
+    margin-left: 0.5rem;
+}
+
+.development-services img, 
+.datascience-services img, 
+.consulting-services img,
+.employee-one img,
+.employee-two img,
+.employee-three img,
+.employee-four img,
+.employee-five img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+}
+
+.datascience-services{
+    display: grid;
+    grid-column: 5 / span 4;
+    justify-items: center;
+}
+
+.consulting-services{
+    display: grid;
+    grid-column: 9 / span 4;
+    justify-items: center;
+    margin-right: 0.5rem;
+}
+
+.about-employees{
+    display: grid;
+    grid-column: 1 / span 12;
+    justify-content: center;
+    background-color: #E7410E;
+}
+
+.about-employees p,
+.about p{
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/*.our-employees{
+    display: grid;
+    gap: 10px;
+    grid-column: 1 / span 12;
+    grid-template-areas: "a b"
+               "c  d"
+               "e  .";
+}*/
+
+.employee-one{
+    display: grid;
+    grid-column: 1 / span 4;
+    justify-items: center;
+    margin-left: 0.5rem;
+}
+
+.employee-two{
+    display: grid;
+    grid-column: 5 / span 4;
+    justify-items: center;
+}
+
+.employee-three{
+    display: grid;
+    grid-column: 9 / span 4;
+    justify-items: center;
+    margin-right: 00.5rem;
+}
+
+.employee-four{
+    display: grid;
+    grid-column: 1 / span 4;
+    justify-items: center;
+    margin-left: 0.5rem;
+}
+
+.employee-five{
+    display: grid;
+    grid-column: 5 / span 4;
+    justify-items: center;
+}
+
+.employee-one p,
+.employee-two p,
+.employee-three p, 
+.employee-four p,
+.employee-five p{
+    font-size: 1.5rem;
+}
+
+footer{
+    display: grid;
+    grid-column: 1 / span 12;
+    align-items: center;
+    grid-template-areas: "a b c";
+    background-color: #472010;
+    color: #fff;
+    padding: 0 1rem;
+}
+
+footer .social-media{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    font-size: 2rem;
+}
+
+footer .copyright{
+    display: flex;
+    justify-content: flex-end;
+}
