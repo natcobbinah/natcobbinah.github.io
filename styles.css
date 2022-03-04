@@ -2,13 +2,13 @@ html{
     font-size: 16px;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:  Arial, Helvetica, sans-serif;
     margin: 0 auto;
 }
 
 .container{
     display: grid;
-    grid-template: 100px 3fr 0.5fr 3fr 0.5fr 3fr 3fr 100px/ repeat(12, 1fr);
+    grid-template: 100px 2.2fr 0.5fr 1.8fr 0.5fr 3fr 3fr 0.5fr 1fr 100px/ repeat(12, 1fr);
     gap: 15px;
 }
 
@@ -45,7 +45,7 @@ header nav ul li a{
 .banner{
     display: grid;
     grid-column: 1 / span 12;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
     background-image: url("https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YnVzaW5lc3MlMjB3aXRoJTIwY29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=60 1200w");
     background-size: cover;
@@ -53,7 +53,7 @@ header nav ul li a{
 
 .banner p{
     font-size: 1.5rem;
-    color: #E7410E;
+    color: #f72a0f; 
     font-style: italic;
     width: 75%;
     text-align: center;
@@ -67,49 +67,47 @@ header nav ul li a{
     background-color: #E7410E;
 }
 
-.development-services{
+.my-picframe{
     display: grid;
-    grid-column: 1 / span 4;
+    grid-column: 3 / span 4;
     justify-items: center;
     margin-left: 0.5rem;
 }
 
-.development-services img, 
-.datascience-services img, 
-.consulting-services img,
-.employee-one img,
-.employee-two img,
-.employee-three img,
-.employee-four img,
-.employee-five img{
+.my-picframe img, 
+.project-one img,
+.project-two img,
+.project-three img,
+.project-four img,
+.project-five img{
     max-width: 100%;
     height: auto;
     display: block;
     border-radius: 20px;
 }
 
-.datascience-services{
+.aboutMe-msg{
     display: grid;
-    grid-column: 5 / span 4;
+    grid-column: 7 / span 5;
     justify-items: center;
 }
 
-.consulting-services{
-    display: grid;
-    grid-column: 9 / span 4;
-    justify-items: center;
-    margin-right: 0.5rem;
+.aboutMe-msg p{
+    text-align: justify;
+    line-height: 1.5rem;
+    font-size: 1rem;
 }
 
-.about-employees{
+.sampleProjects{
     display: grid;
     grid-column: 1 / span 12;
     justify-content: center;
     background-color: #E7410E;
 }
 
-.about-employees p,
-.about p{
+.sampleProjects p,
+.about p,
+.techStack p{
     color: #fff;
     font-size: 1.5rem;
 }
@@ -123,45 +121,83 @@ header nav ul li a{
                "e  .";
 }*/
 
-.employee-one{
+.project-one{
     display: grid;
     grid-column: 1 / span 4;
     justify-items: center;
     margin-left: 0.5rem;
 }
 
-.employee-two{
+.project-two{
     display: grid;
     grid-column: 5 / span 4;
     justify-items: center;
 }
 
-.employee-three{
+.project-three{
     display: grid;
     grid-column: 9 / span 4;
     justify-items: center;
-    margin-right: 00.5rem;
+    margin-right: 0.5rem;
 }
 
-.employee-four{
+.project-four{
     display: grid;
     grid-column: 1 / span 4;
     justify-items: center;
     margin-left: 0.5rem;
 }
 
-.employee-five{
+.project-five{
     display: grid;
     grid-column: 5 / span 4;
     justify-items: center;
+    margin-left: 0.5rem;
 }
 
-.employee-one p,
-.employee-two p,
-.employee-three p, 
-.employee-four p,
-.employee-five p{
-    font-size: 1.5rem;
+.project-one div,
+.project-two div,
+.project-three div, 
+.project-four div,
+.project-five div{
+    text-align: center;
+}
+
+.project-one div p,
+.project-two div p,
+.project-three div p, 
+.project-four div p,
+.project-five div p{
+    line-height: 1.5rem;
+}
+
+.project-one h6,
+.project-two h6,
+.project-three h6, 
+.project-four h6,
+.project-five h6{
+    font-size: 1.2rem;
+}
+
+.techStack{
+    display: grid;
+    grid-column: 1 / span 12;
+    justify-content: center;
+    background-color: #E7410E;
+}
+
+.stackData .languages img,
+.stackData .frameworks img,
+.stackData .databases img{
+    width: 50px;
+    height: 50px;
+}
+
+.stackData{
+   display: grid;
+   justify-content: space-around;
+   grid-column: 1 / span 12;
+   grid-template-areas: "a b c";
 }
 
 footer{
@@ -179,6 +215,10 @@ footer .social-media{
     list-style: none;
     justify-content: space-around;
     font-size: 2rem;
+}
+
+footer .social-media li a{
+    color: #fff;
 }
 
 footer .copyright{
