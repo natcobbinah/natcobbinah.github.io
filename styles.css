@@ -8,7 +8,7 @@ body{
 
 .container{
     display: grid;
-    grid-template: 100px 2.2fr 0.5fr 1.8fr 0.5fr 3fr 3fr 0.5fr 1fr 100px/ repeat(12, 1fr);
+    grid-template: 100px 1.5fr 0.3fr 1fr 0.3fr 2fr 2fr 0.3fr 0.5fr 100px/ repeat(12, 1fr);
     gap: 15px;
 }
 
