@@ -79,7 +79,8 @@ header nav ul li a{
 .project-two img,
 .project-three img,
 .project-four img,
-.project-five img{
+.project-five img,
+.project-six img{
     max-width: 100%;
     height: auto;
     display: block;
@@ -155,11 +156,19 @@ header nav ul li a{
     margin-left: 0.5rem;
 }
 
+.project-six{
+    display: grid;
+    grid-column: 9 / span 4;
+    justify-items: center;
+    margin-left: 0.5rem;
+}
+
 .project-one div,
 .project-two div,
 .project-three div, 
 .project-four div,
-.project-five div{
+.project-five div,
+.project-six div{
     text-align: center;
 }
 
@@ -167,7 +176,8 @@ header nav ul li a{
 .project-two div p,
 .project-three div p, 
 .project-four div p,
-.project-five div p{
+.project-five div p,
+.project-six div p{
     line-height: 1.5rem;
 }
 
@@ -175,7 +185,8 @@ header nav ul li a{
 .project-two h6,
 .project-three h6, 
 .project-four h6,
-.project-five h6{
+.project-five h6,
+.project-six h6{
     font-size: 1.2rem;
 }
 
