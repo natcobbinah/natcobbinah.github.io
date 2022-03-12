@@ -53,9 +53,11 @@ header nav ul li a{
 
 .banner p{
     font-size: 1.5rem;
-    color: #f72a0f; 
+    color: #f72a0f;
+    opacity: 0.95;
     font-style: italic;
     width: 75%;
+    line-height: 2rem;
     text-align: center;
 }
 
