@@ -2,7 +2,7 @@ html{
     font-size: 16px;
 }
 body{
-    font-family: varela round,helvetica neue,Helvetica,Arial,sans-serif;  /*Arial, Helvetica, sans-serif;*/
+    font-family: "varela round","helvetica neue",Helvetica,Arial,sans-serif;  /*Arial, Helvetica, sans-serif;*/
     margin: 0 auto;
 }
 
@@ -249,4 +249,248 @@ footer .social-media li a{
 footer .copyright{
     display: flex;
     justify-content: flex-end;
+}
+
+/*MEDIA QUERIES */
+@media only screen and (max-width: 480px){
+    .container{
+        display: grid;
+        grid-template: 0.1fr 0.8fr 0.1fr 0.4fr 0.1fr 0.1fr  0.1fr 0.4fr 0.2fr/ repeat(12, 1fr);
+        gap: 10px;
+    }
+    
+    header{
+        align-content: center;
+        justify-content: center; 
+         grid-column: 1 / span 12; 
+        background-color: #472010;
+    }
+    
+    header .logoTitle{
+        display: none;
+    }
+
+    header nav ul li a {
+        padding: 0.4rem;
+    }
+    
+    .banner{
+        display: grid;
+        grid-column: 1 / span 12;
+        justify-items: center;
+        align-items: center;
+        background-image: url("https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YnVzaW5lc3MlMjB3aXRoJTIwY29tcHV0ZXJzfGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=60 1200w");
+        background-size: cover;
+    }
+    
+    .banner p{
+        font-size: 1.5rem;
+        color: #f72a0f;
+        opacity: 0.95;
+        font-style: italic;
+        width: 75%;
+        line-height: 2rem;
+        text-align: center;
+    }
+    
+    .about{
+        display: grid;
+        grid-column:  1 / span 12;
+        justify-content: center;
+        align-items: center;
+        background-color: #E7410E;
+    }
+    
+    .my-picframe{
+        grid-column: 1 / span 12;
+        justify-items: center;
+        margin-right: 0.5rem;
+    }
+    
+    .my-picframe img, 
+    .project-one img,
+    .project-two img,
+    .project-three img,
+    .project-four img,
+    .project-five img,
+    .project-six img{
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 20px;
+    }
+    
+    .aboutMe-msg{
+        display: grid;
+        grid-column: 1 / span 12;
+        justify-content: space-around;
+        justify-items: center;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    
+    .aboutMe-msg p{
+        text-align: justify;
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .sampleProjects{
+        display: grid;
+        grid-column: 1 / span 12;
+        justify-content: center;
+        background-color: #E7410E;
+    }
+    
+    .sampleProjects p,
+    .about p,
+    .techStack p{
+        color: #fff;
+        font-size: 1.5rem;
+    }
+    
+    .project-one{
+        display: grid;
+        grid-column: 1 / span 12;
+        justify-items: center;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    
+    .project-one .description,
+    .project-two .description,
+    .project-three .description,
+    .project-four .description,
+    .project-five .description,
+    .project-six .description{
+        display: none;
+    }
+    
+    .project-two{
+        display: grid;
+        grid-column: 1 / span 12;
+        justify-items: center;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    
+    .project-three{
+        display: grid;
+        grid-column: 1 / span 12;
+        justify-items: center;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    
+    .project-four{
+        display: grid;
+        grid-column: 1 / span 12;
+        justify-items: center;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    
+    .project-five{
+        display: grid;
+        grid-column: 1 / span 12;
+        justify-items: center;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    
+    .project-six{
+        display: grid;
+        grid-column: 1 / span 12;
+        justify-items: center;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    
+    .project-one div,
+    .project-two div,
+    .project-three div, 
+    .project-four div,
+    .project-five div,
+    .project-six div{
+        text-align: center;
+    }
+    
+    .project-one div p,
+    .project-two div p,
+    .project-three div p, 
+    .project-four div p,
+    .project-five div p,
+    .project-six div p{
+        line-height: 1.5rem;
+    }
+    
+    .project-one h6,
+    .project-two h6,
+    .project-three h6, 
+    .project-four h6,
+    .project-five h6,
+    .project-six h6{
+        font-size: 1.2rem;
+    }
+    
+    .project-one .brailleAppInfo,
+    .project-two .drillingAppInfo,
+    .project-three .payrollAppInfo, 
+    .project-four .youtubeAppInfo,
+    .project-five .restAppInfo,
+    .project-six .textWriterAppInfo{
+        padding-left: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .techStack{
+        display: grid;
+        grid-column: 1 / span 12;
+        justify-content: center;
+        background-color: #E7410E;
+    }
+    
+    .stackData .languages img,
+    .stackData .frameworks img,
+    .stackData .databases img{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .stackData{
+       display: grid;
+       justify-content: space-around;
+       grid-column: 1 / span 12;
+       grid-template-areas: "a b c";
+       margin-left: 0.5rem;
+       margin-right: 0.5rem;
+    }
+    
+    footer{
+        display: grid;
+        grid-column: 1 / span 12;
+        align-items: center;
+        grid-template-areas: "a b c";
+        background-color: #472010;
+        color: #fff;
+        padding: 0 1rem;
+    }
+    
+    footer .social-media{
+        grid-column: 1 / span 12;
+        justify-content: space-around;
+        font-size: 2rem;
+    }
+    
+    footer .social-media li a{
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    
+    footer .copyright{
+        display: flex;
+        justify-content: flex-end;
+    }
 }

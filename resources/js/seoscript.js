@@ -1,7 +1,7 @@
 var seoObject = [
     {
         "@context": "https://schema.org",
-        "@type": "BlogPosting",
+        "@type": "Blog",
         "abstract": "Be it objectivism or pflichterfullung shaping my culture and weltanschauung of living, it all boils down to the quality of our lives and how well we take responsilbity together with a sense of Gezelligheld from my perspective, is what makes us co-exist to achieving a better civilization",
         "author": {
             "@type": "Person",
