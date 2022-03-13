@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +10,7 @@
     <link href="./resources/css/styles.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/48bf10ba77.js" crossorigin="anonymous"></script>
     <script src="./resources/js/pgscript.js" defer></script>
-    <script src="./resources/js/seoscripts.js" async></script>
+    <script src="./resources/js/seoscript.js" async></script>
 </head>
 
 <body>
@@ -19,7 +18,7 @@
         <header>
             <p class="logoTitle">NatCobbinah</p>
             <nav>
-                <ul>
+                <ul role="presentation">
                     <li><a href="#">Home</a></li>
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -28,7 +27,7 @@
             </nav>
         </header>
 
-        <div class="banner">
+        <div class="banner" role="presentation">
             <p>Be it objectivism or pflichterfullung shaping my culture and weltanschauung of living
                 , it all boils down to the quality of our lives and how well we take responsilbity together with
                 a sense of Gezelligheld from my perspective, is what makes us co-exist to achieving a better
@@ -37,7 +36,7 @@
             <p>Bonjour and Bienvenue...Let's take a walk</p>
         </div>
 
-        <div class="about" id="about">
+        <div class="about" id="about" role="presentation">
             <p>à propos de moi</p>
         </div>
 
@@ -46,7 +45,7 @@
                 src="https://images.unsplash.com/photo-1509475826633-fed577a2c71b?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTh8fGF2YXRhcnN8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=60 700w">
         </div>
 
-        <div class="aboutMe-msg">
+        <div class="aboutMe-msg" role="presentation">
             <p>I've had the taste of what it feels like to be a front-end, back-end, or combining both of these
                 stack disciplines in my development as a professional developer.My plan to staying
                 adaptable in the computing industry has been to have the requisite knowledge of best practices,
@@ -57,16 +56,15 @@
             </p>
         </div>
 
-        <div class="sampleProjects" id="projects">
+        <div class="sampleProjects" id="projects" role="presentation">
             <p>Sample Personal Projects</p>
         </div>
 
-        <!--<div class="our-employees">-->
         <div class="project-one">
             <img src="https://media.istockphoto.com/photos/close-up-of-male-hand-reading-braille-text-picture-id983873912?b=1&amp;k=20&amp;m=983873912&amp;s=170667a&amp;w=0&amp;h=VrIBNxgW0RyNqEKaf06mMR552TJrlt8uoaooz6UTEjs="
                 alt="Braille">
             <div class="braille">
-                <h6>BrailleCode Generator<span title="See-More-Info" class="brailleAppInfo"><i
+                <h6 aria-label="Braille Code Generator">BrailleCode Generator<span title="See-More-Info" class="brailleAppInfo"><i
                             class="fa-solid fa-circle-plus"></i></span></h6>
                 <p id="brailleDescription" class="description">Aids in converting braille to characters and vice versa.
                     The goal of the project, is to help individuals use the
@@ -83,7 +81,7 @@
             <img src="https://images.unsplash.com/photo-1629540946404-ebe133e99f49?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZHJpbGxpbmd8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=60 400w"
                 alt="directionaDrilling">
             <div class="drilling">
-                <h6>Directional Drilling Calculator<span title="See-More-Info" class="drillingAppInfo"><i
+                <h6 aria-label="Directional Drilling Calculator">Directional Drilling Calculator<span title="See-More-Info" class="drillingAppInfo"><i
                             class="fa-solid fa-circle-plus"></i></span></h6>
                 <p id="drillDescription" class="description">Aids in understanding directional drilling for petroleum
                     and earth
@@ -102,7 +100,7 @@
             <img src="https://media.istockphoto.com/photos/financial-spreadsheet-report-picture-id1026400680?b=1&amp;k=20&amp;m=1026400680&amp;s=170667a&amp;w=0&amp;h=N7mMH3L8VrJbQBL21NFupEnPBSrymqTUOFOCP9U0N6k="
                 alt="payroll">
             <div class="payroll">
-                <h6>Payroll Mgmt System demo<span title="See-More-Info" class="payrollAppInfo"><i
+                <h6 aria-label="Payroll Management System">Payroll Mgmt System demo<span title="See-More-Info" class="payrollAppInfo"><i
                             class="fa-solid fa-circle-plus"></i></span></h6>
                 <p id="payrollDescription" class="description">A demo payroll management system for a firm, managing
                     resources and personnel
@@ -117,7 +115,7 @@
             <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8eW91dHViZSUyMHR1dG9yaWFsc3xlbnwwfHwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=60 400w"
                 alt="youtube">
             <div class="youtube">
-                <h6>Youtube Tutorials<span title="See-More-Info" class="youtubeAppInfo"><i
+                <h6 aria-label="Youtube Tutorials">Youtube Tutorials<span title="See-More-Info" class="youtubeAppInfo"><i
                             class="fa-solid fa-circle-plus"></i></span></h6>
                 <p id="youtubeDescription" class="description">The goal of my tutorials is to help solve problems faced
                     in development using
@@ -131,7 +129,7 @@
             <img src="https://images.unsplash.com/photo-1615309662472-4ca77a77a189?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNsb3VkJTIwY29tcHV0aW5nfGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=60 400w"
                 alt="RestAPIs">
             <div class="restapis">
-                <h6>Rest API-Services Demo<span title="See-More-Info" class="restAppInfo"><i
+                <h6 aria-label="Rest API Services Demo">Rest API-Services Demo<span title="See-More-Info" class="restAppInfo"><i
                             class="fa-solid fa-circle-plus"></i></span></h6>
                 <p id="restDescription" class="description">Here, developed and tested apiEndpoints for learning
                     purposes,
@@ -150,7 +148,7 @@
             <img src="https://images.unsplash.com/photo-1476357471311-43c0db9fb2b4?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8b2ZmaWNlJTIwd29yZCUyMHNvZnR3YXJlfGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=60 400w"
                 alt="TextWriter">
             <div class="text-writer">
-                <h6>TextWriter Demo <span title="See-More-Info" class="textWriterAppInfo"><i
+                <h6 aria-label="Text Writer">TextWriter Demo <span title="See-More-Info" class="textWriterAppInfo"><i
                             class="fa-solid fa-circle-plus"></i></span></h6>
                 <p id="textWriterDescription" class="description">Here,a minimalistic textWriter is developed using
                     javaSwing with incorporation of
@@ -165,39 +163,39 @@
             </div>
         </div>
 
-        <div class="techStack" id="techStack">
-            <p>TechStack</p>
+        <div class="techStack" id="techStack" role="presentation">
+            <p>TechStack and Familiarities</p>
         </div>
 
         <div class="stackData">
             <div class="languages">
                 <h5>Langugaes</h5>
-                <img src="./resources/images/java.svg" alt="java">
-                <img src="./resources/images/javascript.svg" alt="javascript">
-                <img src="./resources/images/html.svg" alt="html">
-                <img src="./resources/images/css3.svg" alt="css">
-                <img src="./resources/images/typescript.svg" alt="typescript">
-                <img src="./resources/images/dart.svg" alt="dart">
+                <img src="./resources/images/java.svg" alt="java logo">
+                <img src="./resources/images/javascript.svg" alt="javascript logo">
+                <img src="./resources/images/html.svg" alt="html logo">
+                <img src="./resources/images/css3.svg" alt="css logo">
+                <img src="./resources/images/typescript.svg" alt="typescript logo">
+                <img src="./resources/images/dart.svg" alt="dart logo">
             </div>
             <div class="frameworks">
                 <h5>Frameworks</h5>
-                <img src="./resources/images/spring.svg" alt="springboot">
-                <img src="./resources/images/react.svg" alt="react">
-                <img src="./resources/images/angular.svg" alt="angular">
-                <img src="./resources/images/nodejs.svg" alt="NodeJS">
-                <img src="./resources/images/flutter.svg" alt="flutter">
+                <img src="./resources/images/spring.svg" alt="springboot logo">
+                <img src="./resources/images/react.svg" alt="react logo">
+                <img src="./resources/images/angular.svg" alt="angular logo">
+                <img src="./resources/images/nodejs.svg" alt="NodeJS logo">
+                <img src="./resources/images/flutter.svg" alt="flutter logo">
             </div>
             <div class="databases">
                 <h5>Databases</h5>
-                <img src="./resources/images/mongodb.svg" alt="MongoDB">
-                <img src="./resources/images/postgresql.svg" alt="PostgreSQL">
-                <img src="./resources/images/mysql.svg" alt="MySQL">
+                <img src="./resources/images/mongodb.svg" alt="MongoDB logo">
+                <img src="./resources/images/postgresql.svg" alt="PostgreSQL  logo">
+                <img src="./resources/images/mysql.svg" alt="MySQL logo">
             </div>
         </div>
 
         <footer>
             <h2 class="follow-us">Follow Me on</h2>
-            <ul class="social-media">
+            <ul class="social-media" role="presentation">
                 <li><a target="_blank" href="https://www.youtube.com/channel/UCk6c_UkHWtlSSrrjK9pUz4w/videos/"><i
                             class="fa-brands fa-youtube"></i></a></li>
                 <li><a target="_blank" href="https://stackoverflow.com/users/15930440/walkingkali/"><i
