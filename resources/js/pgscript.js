@@ -16,22 +16,16 @@ let youtube_description = document.getElementById('youtubeDescription');
 let rest_description = document.getElementById('restDescription');
 let textWriter_description = document.getElementById('textWriterDescription');
 
+let allBtnsToBeClicked = [seeMoreofBrailleBtn, seeMoreofDrillBtn, seeMoreofPayrollBtn, seeMoreofYoutubeBtn,
+    seeMoreofRestBtn, seeMoreofWriterBtn];
 
-seeMoreofBrailleBtn.addEventListener('click', () => {
-    toggleHiddenDescription(braille_description,seeMoreofBrailleBtn)
-});
-seeMoreofDrillBtn.addEventListener('click', () => {
-    toggleHiddenDescription(drill_description,seeMoreofDrillBtn)
-});
-seeMoreofPayrollBtn.addEventListener('click', () => {
-    toggleHiddenDescription(payroll_description,seeMoreofPayrollBtn)
-});
-seeMoreofYoutubeBtn.addEventListener('click', () => {
-    toggleHiddenDescription(youtube_description,seeMoreofYoutubeBtn)
-});
-seeMoreofRestBtn.addEventListener('click', () => {
-    toggleHiddenDescription(rest_description,seeMoreofRestBtn)
-});
-seeMoreofWriterBtn.addEventListener('click', () => {
-    toggleHiddenDescription(textWriter_description,seeMoreofWriterBtn)
+let allDescriptionsToDisplay = [braille_description, drill_description, payroll_description, youtube_description,
+    rest_description, textWriter_description];
+
+//note buttonFxntionality and its description in the subsequent array matches 
+//for the loop fxtionality to work as exepcted
+allBtnsToBeClicked.forEach((btnActivity, index) => {
+    btnActivity.addEventListener('click', () => {
+        toggleHiddenDescription(allDescriptionsToDisplay[index], allBtnsToBeClicked[index]);
+    })
 });
