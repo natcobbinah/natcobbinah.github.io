@@ -102,12 +102,19 @@ header nav ul li a{
 .my-picframe img, 
 .project-one img,
 .project-two img,
-.project-three img,
 .project-four img,
 .project-five img,
 .project-six img{
     max-width: 100%;
     height: auto;
+    display: block;
+    border-radius: 20px;
+}
+
+/*the height of img has to be reduced*/
+.project-three img{
+    width: 100%;
+    height: 47vh;
     display: block;
     border-radius: 20px;
 }
@@ -218,7 +225,7 @@ header nav ul li a{
 
 .project-one .brailleAppInfo,
 .project-two .drillingAppInfo,
-.project-three .payrollAppInfo, 
+.project-three .morseCodeAppInfo, 
 .project-four .youtubeAppInfo,
 .project-five .restAppInfo,
 .project-six .textWriterAppInfo{
@@ -463,7 +470,7 @@ footer .copyright{
     
     .project-one .brailleAppInfo,
     .project-two .drillingAppInfo,
-    .project-three .payrollAppInfo, 
+    .project-three .morseCodeAppInfo, 
     .project-four .youtubeAppInfo,
     .project-five .restAppInfo,
     .project-six .textWriterAppInfo{
