@@ -114,7 +114,7 @@ header nav ul li a{
 /*the height of img has to be reduced*/
 .project-three img{
     width: 100%;
-    height: 47vh;
+    height: 18rem;
     display: block;
     border-radius: 20px;
 }
