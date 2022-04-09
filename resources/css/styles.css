@@ -126,6 +126,13 @@ header nav ul li a{
     border-radius: 20px;
 }
 
+.project-eight img{
+    width: 100%;
+    height: 18rem;
+    display: block;
+    border-radius: 20px;
+}
+
 
 .aboutMe-msg{
     display: grid;
@@ -167,7 +174,8 @@ header nav ul li a{
 .project-four .description,
 .project-five .description,
 .project-six .description,
-.project-seven .description{
+.project-seven .description,
+.project-eight .description{
     display: none;
 }
 
@@ -207,6 +215,13 @@ header nav ul li a{
 
 .project-seven{
     display: grid;
+    grid-column: 1 / span 4;
+    justify-items: center;
+    margin-left: 0.5rem;
+}
+
+.project-eight{
+    display: grid;
     grid-column: 5 / span 4;
     justify-items: center;
     margin-left: 0.5rem;
@@ -218,7 +233,8 @@ header nav ul li a{
 .project-four div,
 .project-five div,
 .project-six div,
-.project-seven div{
+.project-seven div,
+.project-eight div{
     text-align: center;
 }
 
@@ -228,7 +244,8 @@ header nav ul li a{
 .project-four div p,
 .project-five div p,
 .project-six div p,
-.project-seven div p{
+.project-seven div p,
+.project-eight div p{
     line-height: 1.5rem;
 }
 
@@ -238,7 +255,8 @@ header nav ul li a{
 .project-four h6,
 .project-five h6,
 .project-six h6,
-.project-seven h6{
+.project-seven h6,
+.project-eight h6{
     font-size: 1.2rem;
 }
 
@@ -248,7 +266,8 @@ header nav ul li a{
 .project-four .youtubeAppInfo,
 .project-five .restAppInfo,
 .project-six .textWriterAppInfo,
-.project-seven .hackerNewsAppInfo{
+.project-seven .hackerNewsAppInfo,
+.project-eight .YelpBusinessAppInfo{
     padding-left: 1rem;
     font-size: 1.5rem;
 }
