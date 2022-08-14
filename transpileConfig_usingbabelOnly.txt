@@ -1,0 +1,25 @@
+{
+  "name": "githubportfoliopage",
+  "version": "1.0.0",
+  "description": "My Portfolio Page, showcasing  the love for software development and the adventures encountered through development of sample projects",
+  "main": "resources/js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel resources/js -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natcobbinah/natcobbinah.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natcobbinah/natcobbinah.github.io/issues"
+  },
+  "homepage": "https://github.com/natcobbinah/natcobbinah.github.io#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.10"
+  }
+}

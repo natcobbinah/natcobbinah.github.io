@@ -8,4 +8,4 @@ const toggleHiddenDescription = (domElement,changeClickedBtnIcon) => {
     }
 }
 
-export {toggleHiddenDescription};
+module.exports = toggleHiddenDescription

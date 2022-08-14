@@ -1,4 +1,6 @@
-import { toggleHiddenDescription } from '../modules/dom_modules.js';
+const { toggleHiddenDescription } = require('../modules/dom_modules.js');
+const {seoObject} = require('./seoscript');
+import css from  '../css/styles.css';
 
 //icon buttons 
 let seeMoreofBrailleBtn = document.querySelector('.brailleAppInfo');
@@ -33,7 +35,7 @@ demoAppsMap.set(seeMoreofBrailleBtn, braille_description)
     .set(seeMoreofYelpBusineesAppBtn, yelpBusiness_description)
     .set(seeMoreofJsonToDartClassAppBtn, jsonToDartClass_description)
 
-demoAppsMap.forEach((value_Description, key_Btns) => {
+demoAppsMap?.forEach((value_Description, key_Btns) => {
     key_Btns.addEventListener('click', () => {
         toggleHiddenDescription(value_Description, key_Btns);
     })
@@ -66,4 +68,13 @@ loadPageImages.forEach((value, key) => {
         .catch(error => {
             console.log(error)
         })     
+})
+
+
+//seo
+seoObject.forEach(structuredTextData => {
+    const script = document.createElement('script');
+    script.setAttribute('type', 'application/ld+json');
+    script.textContent = structuredTextData;
+    document.head.appendChild(script);
 })
