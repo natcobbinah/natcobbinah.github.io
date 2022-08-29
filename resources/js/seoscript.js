@@ -12,4 +12,12 @@ var seoObject = [
     }
 ];
 
+//seo
+seoObject.forEach(structuredTextData => {
+    const script = document.createElement('script');
+    script.setAttribute('type', 'application/ld+json');
+    script.textContent = structuredTextData;
+    document.head.appendChild(script);
+})
+
 module.exports = seoObject

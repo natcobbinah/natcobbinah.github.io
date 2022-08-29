@@ -22,10 +22,5 @@ module.exports = {
                 type: 'asset/resource',
             },
         ]
-    },
-    devServer: {
-        allowedHosts: 'auto',
-        host: '0.0.0.0',
-        hot: true,
     }
 };

@@ -1,6 +1,6 @@
-const { toggleHiddenDescription } = require('../modules/dom_modules.js');
 const {seoObject} = require('./seoscript');
 import css from  '../css/styles.css';
+import {toggleHiddenDescription} from './showHideTextScript';
 
 //icon buttons 
 let seeMoreofBrailleBtn = document.querySelector('.brailleAppInfo');
@@ -33,11 +33,11 @@ demoAppsMap.set(seeMoreofBrailleBtn, braille_description)
     .set(seeMoreofWriterBtn, textWriter_description)
     .set(seeMoreofHackerNewsBtn, hackerNews_description)
     .set(seeMoreofYelpBusineesAppBtn, yelpBusiness_description)
-    .set(seeMoreofJsonToDartClassAppBtn, jsonToDartClass_description)
-
-demoAppsMap?.forEach((value_Description, key_Btns) => {
-    key_Btns.addEventListener('click', () => {
-        toggleHiddenDescription(value_Description, key_Btns);
+    .set(seeMoreofJsonToDartClassAppBtn, jsonToDartClass_description);
+    
+demoAppsMap.forEach((description, descriptionButtonPress) => {
+    descriptionButtonPress.addEventListener('click', () => {
+        toggleHiddenDescription(description, descriptionButtonPress)
     })
 })
 
@@ -54,10 +54,10 @@ loadPageImages.set("my-picframe", "https://images.unsplash.com/photo-15094758266
     .set("project-six", "https://images.unsplash.com/photo-1476357471311-43c0db9fb2b4?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8b2ZmaWNlJTIwd29yZCUyMHNvZnR3YXJlfGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=60 400w")
     .set("project-seven", "https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bmV3cyUyMGZlZWR8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=900&amp;q=60 900w")
     .set("project-eight", "https://images.unsplash.com/photo-1474631245212-32dc3c8310c6?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGJ1c2luZXNzfGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=60 600w")
-    .set("project-nine", "https://images.unsplash.com/photo-1610986602538-431d65df4385?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8anNvbnxlbnwwfHwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60 500w")
+    .set("project-nine", "https://images.unsplash.com/photo-1610986602538-431d65df4385?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8anNvbnxlbnwwfHwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60 500w");
 
 const retrieveUnsplashImages = (imageUrl) =>
-    fetch(imageUrl).then(response => response.blob())
+    fetch(imageUrl).then(response => response.blob());
 
 loadPageImages.forEach((value, key) => {
     let insertImage = document.querySelector(`.${key} img`);
@@ -68,13 +68,4 @@ loadPageImages.forEach((value, key) => {
         .catch(error => {
             console.log(error)
         })     
-})
-
-
-//seo
-seoObject.forEach(structuredTextData => {
-    const script = document.createElement('script');
-    script.setAttribute('type', 'application/ld+json');
-    script.textContent = structuredTextData;
-    document.head.appendChild(script);
 })
