@@ -5,35 +5,32 @@ import {toggleHiddenDescription} from './showHideTextScript';
 //icon buttons 
 let seeMoreofBrailleBtn = document.querySelector('.brailleAppInfo');
 let seeMoreofDrillBtn = document.querySelector('.drillingAppInfo');
-let seeMoreofMorseCodeBtn = document.querySelector('.morseCodeAppInfo');
+//let seeMoreofMorseCodeBtn = document.querySelector('.morseCodeAppInfo');
 let seeMoreofYoutubeBtn = document.querySelector('.youtubeAppInfo');
 let seeMoreofRestBtn = document.querySelector('.restAppInfo');
-let seeMoreofWriterBtn = document.querySelector('.textWriterAppInfo');
+//let seeMoreofWriterBtn = document.querySelector('.textWriterAppInfo');
 let seeMoreofHackerNewsBtn = document.querySelector('.hackerNewsAppInfo');
 let seeMoreofYelpBusineesAppBtn = document.querySelector('.YelpBusinessAppInfo');
-let seeMoreofJsonToDartClassAppBtn = document.querySelector('.jsonToDartDemoAppInfo');
+//let seeMoreofJsonToDartClassAppBtn = document.querySelector('.jsonToDartDemoAppInfo');
 
 //paragraph descriptions
-let braille_description = document.getElementById('brailleDescription');
-let drill_description = document.getElementById('drillDescription');
-let morseCode_description = document.getElementById('morseCodeDescription');
-let youtube_description = document.getElementById('youtubeDescription');
-let rest_description = document.getElementById('restDescription');
-let textWriter_description = document.getElementById('textWriterDescription');
-let hackerNews_description = document.getElementById('hackerNewsAppDescription');
-let yelpBusiness_description = document.getElementById('yelpBusinessAppDescription');
-let jsonToDartClass_description = document.getElementById('jsonToDartDemoAppDescription');
+let braille_description = document.querySelector('.project-six #brailleDescription ');
+let drill_description = document.querySelector('.project-five #drillDescription');
+//let morseCode_description = document.getElementById('morseCodeDescription');
+let youtube_description = document.querySelector('.project-four #youtubeDescription');
+let rest_description = document.querySelector('.project-three #restDescription');
+//let textWriter_description = document.getElementById('textWriterDescription');
+let hackerNews_description = document.querySelector('.project-one #hackerNewsAppDescription');
+let yelpBusiness_description = document.querySelector('.project-two #yelpBusinessAppDescription');
+//let jsonToDartClass_description = document.getElementById('jsonToDartDemoAppDescription');
 
 const demoAppsMap = new Map();
 demoAppsMap.set(seeMoreofBrailleBtn, braille_description)
     .set(seeMoreofDrillBtn, drill_description)
-    .set(seeMoreofMorseCodeBtn, morseCode_description)
     .set(seeMoreofYoutubeBtn, youtube_description)
     .set(seeMoreofRestBtn, rest_description)
-    .set(seeMoreofWriterBtn, textWriter_description)
     .set(seeMoreofHackerNewsBtn, hackerNews_description)
     .set(seeMoreofYelpBusineesAppBtn, yelpBusiness_description)
-    .set(seeMoreofJsonToDartClassAppBtn, jsonToDartClass_description);
     
 demoAppsMap.forEach((description, descriptionButtonPress) => {
     descriptionButtonPress.addEventListener('click', () => {
@@ -44,7 +41,7 @@ demoAppsMap.forEach((description, descriptionButtonPress) => {
 //Load images in html ContentPages using
 //promises to reduce  high BlockingTime 
 //when loading images together with pageContent
-const loadPageImages = new Map();
+/* const loadPageImages = new Map();
 loadPageImages.set("my-picframe", "https://images.unsplash.com/photo-1509475826633-fed577a2c71b?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTh8fGF2YXRhcnN8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=60 700w")
     .set("project-one", "https://media.istockphoto.com/photos/close-up-of-male-hand-reading-braille-text-picture-id983873912?b=1&amp;k=20&amp;m=983873912&amp;s=170667a&amp;w=0&amp;h=VrIBNxgW0RyNqEKaf06mMR552TJrlt8uoaooz6UTEjs=")
     .set("project-two", "https://images.unsplash.com/photo-1629540946404-ebe133e99f49?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZHJpbGxpbmd8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=60 400w")
@@ -68,4 +65,4 @@ loadPageImages.forEach((value, key) => {
         .catch(error => {
             console.log(error)
         })     
-})
+}) */
