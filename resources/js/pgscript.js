@@ -38,6 +38,7 @@ demoAppsMap.forEach((description, descriptionButtonPress) => {
     })
 })
 
+
 //Load images in html ContentPages using
 //promises to reduce  high BlockingTime 
 //when loading images together with pageContent
