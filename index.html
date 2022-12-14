@@ -23,32 +23,39 @@
 <body>
     <div class="container">
         <header>
-            <p class="logoTitle">NatCobbinah</p>
+            <p class="logoTitle" data-i18n-key="logoTitle">NatCobbinah</p>
             <!-- <p class="resume"><a
                     href="https://docs.google.com/viewerng/viewer?url=https://github.com/natcobbinah/natcobbinah.github.io/blob/master/resources/resume_and_certs/NATHANIEL_COBBINAH_CV.pdf"
                     target="_blank"><i class="fa-solid fa-book-journal-whills"></i></a><span>CV</span></p> -->
             <nav>
                 <ul role="presentation">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#techStack">TechStack</a></li>
+                    <li><a href="#" data-i18n-key="home">Home</a></li>
+                    <li><a href="#about" data-i18n-key="about-me">About Me</a></li>
+                    <li><a href="#projects" data-i18n-key="projects">Projects</a></li>
+                    <li><a href="#techStack" data-i18n-key="techStack">TechStack</a></li>
+                    <!-- <li>
+                        <select data-i18n-switcher class="locale-switcher">
+                            <option value="en">English</option>
+                            <option value="fr">French </option>
+                        </select>
+                    </li> -->
                 </ul>
             </nav>
         </header>
 
         <div class="banner" role="presentation">
-            <p>Be it objectivism or pflichterfullung shaping my culture and weltanschauung of living
+            <p data-i18n-key="my-philosophy">Be it objectivism or pflichterfullung shaping my culture and weltanschauung
+                of living
                 , it all boils down to the quality of our lives and how well we take responsilbity together with
                 a sense of Gezelligheld from my perspective, is what makes us co-exist to achieving a better
                 civilization.
             </p>
             <p></p>
-            <p>Hello and Welcome...Let's take a walk</p>
+            <p data-i18n-key="my-welcoming">Hello and Welcome...Let's take a walk</p>
         </div>
 
         <div class="about" id="about" role="presentation">
-            <p> About Me</p>
+            <p data-i18n-key="about-me-title"> About Me</p>
         </div>
 
         <div class="my-picframe">
@@ -56,24 +63,28 @@
         </div>
 
         <div class="aboutMe-msg" role="presentation">
-            <p>
-              &#127940; Growing up from an early age, different philosophies have shaped my understanding and world outlook in 
-              how I approached a problem or thought about its solution.
-              From self-interest(objectivism) to self-sacrifice (pflichterfüllung), I have continuously achieved my 
-              objectives with small wins to the next.
+            <p data-i18n-key="aboutme-msg">
+                &#127940; Growing up from an early age, different philosophies have shaped my understanding and world
+                outlook in
+                how I approached a problem or thought about its solution.
+                From self-interest(objectivism) to self-sacrifice (pflichterfüllung), I have continuously achieved my
+                objectives with small wins to the next.
             </p>
 
-            <p>
-              &#127947; I am Cobbinah Nathaniel, a software developer with a <b>Computer Science and Engineering</b> background, and 
-              a graduate of the <b>University of Mines and Technology, Ghana</b>. I possess excellent technical skills and
-              an understanding of software development processes to meet the required client and market demands as a
-              developer, coupled with hands-on industry-level experience.
+            <p data-i18n-key="aboutme-msg">
+                &#127947; I am Cobbinah Nathaniel, a software developer with a <b>Computer Science and Engineering</b>
+                background, and
+                a graduate of the <b>University of Mines and Technology, Ghana</b>. I possess excellent technical skills
+                and
+                an understanding of software development processes to meet the required client and market demands as a
+                developer, coupled with hands-on industry-level experience.
             </p>
 
-            <p>
-              &#127891; Currently, undertaking my <b>Master's</b> studies  at <b>Digital College, Paris, France</b> in <b>Information Technology</b>.
+            <p data-i18n-key="aboutme-msg">
+                &#127891; Currently, undertaking my <b>Master's</b> studies at <b>Digital College, Paris, France</b> in
+                <b>Information Technology</b>.
             </p>
-<!-- 
+            <!-- 
             <ul>
                 <li> &#127891; I am a fast learner</li>
                 <li> &#127940; Embrace changes positively</li>
@@ -84,26 +95,27 @@
         <hr />
 
         <div class="sampleProjects" id="projects" role="presentation">
-            <p>Sample Demo Projects</p>
+            <p data-i18n-key="sampleProjects">Sample Demo Projects</p>
         </div>
 
         <!--Sample projects section-->
         <div class="project-one">
             <img src="./resources/images/hackernews.PNG" alt="hackerNewsApp">
             <div class="hacker-newsApp">
-                <h6 aria-label="HackerNewsApp">HackerNews App Demo <span title="See-More-Info"
-                        class="hackerNewsAppInfo"><i class="fa-solid fa-angle-right"></i></span></h6>
+                <h6 aria-label="HackerNewsApp" data-i18n-key="hackernewsapp-demo">HackerNews App Demo <span
+                        title="See-More-Info" class="hackerNewsAppInfo"><i class="fa-solid fa-angle-right"></i></span>
+                </h6>
 
                 <div id="hackerNewsAppDescription">
-                    <p class="description">
+                    <p class="description" data-i18n-key="hackernewsapp-desc">
                         A dynamic newsFeed web application interacting with hackerNewsApi and mimicks
                         hackerNews functionalities
                     </p>
                     <ul>
-                        <li>HTML, CSS and JS only</li>
-                        <li>CodeBase: <a target="_blank"
+                        <li data-i18n-key="hackernewsapp-demo-langtools">HTML, CSS and JS only</li>
+                        <li data-i18n-key="hackernewsapp-demo-codebase">CodeBase: <a target="_blank"
                                 href="https://github.com/natcobbinah/HackerNewsApp">HackerNewsApp</a></li>
-                        <li>Live Demo: <a target="_blank"
+                        <li data-i18n-key="hackernewsapp-demo-livedemo">Live Demo: <a target="_blank"
                                 href="https://fastidious-melba-5320f2.netlify.app">HackerNews</a>
                         </li>
                     </ul>
@@ -114,20 +126,22 @@
         <div class="project-two">
             <img src="./resources/images/yelp2.PNG" alt="YelpBusinessAppDemo">
             <div class="yelp-businessApp">
-                <h6 aria-label="YelpBusinessApp">YelpBusiness-Search Demo <span title="See-More-Info"
-                        class="YelpBusinessAppInfo"><i class="fa-solid fa-angle-right"></i></span></h6>
+                <h6 aria-label="YelpBusinessApp" data-i18n-key="yelpbusinessapp-demo">YelpBusiness-Search Demo <span
+                        title="See-More-Info" class="YelpBusinessAppInfo"><i class="fa-solid fa-angle-right"></i></span>
+                </h6>
 
                 <div id="yelpBusinessAppDescription">
-                    <p class="description">A ReactJS webApp communicating with
+                    <p class="description" data-i18n-key="yelpbusinessapp-desc">A ReactJS webApp communicating with
                         the yelpAPI (businessEndpoint), providing an interface for users to search for business and
                         their
                         location, together with other miscellaneous information.
                     </p>
                     <ul>
-                        <li>ReactJS</li>
-                        <li>CodeBase: <a target="_blank" href="https://github.com/natcobbinah/YelpBusiness">YelpBusiness
+                        <li data-i18n-key="yelpbusinessapp-demo-langtools">ReactJS</li>
+                        <li data-i18n-key="yelpbusinessapp-demo-codebase">CodeBase: <a target="_blank"
+                                href="https://github.com/natcobbinah/YelpBusiness">YelpBusiness
                                 Demo</a></li>
-                        <li>Live Demo: <a target="_blank"
+                        <li data-i18n-key="yelpbusinessapp-demo-livedemo">Live Demo: <a target="_blank"
                                 href="https://yelp-business.vercel.app/">YelpBusiness-Search</a>
                         </li>
                     </ul>
@@ -138,19 +152,19 @@
         <div class="project-three">
             <img src="./resources/images/diningReview.PNG" alt="RestAPIs">
             <div class="restapis">
-                <h6 aria-label="Rest API Services Demo">Rest API-Services Demo <span title="See-More-Info"
-                        class="restAppInfo"><i class="fa-solid fa-angle-right"></i></span></h6>
+                <h6 aria-label="Rest API Services Demo" data-i18n-key="restapisapp-demo">Rest API-Services Demo <span
+                        title="See-More-Info" class="restAppInfo"><i class="fa-solid fa-angle-right"></i></span></h6>
 
                 <div id="restDescription">
-                    <p class="description">
+                    <p class="description" data-i18n-key="restapisapp-desc">
                         A diningReview restAPI services built with requirements following user, restaurant
                         and diningReview as entities in its use case. More indepth information on github README.
                     </p>
                     <ul>
-                        <li>Java / SpringBoot / h2 database / OpenAPI</li>
-                        <li>CodeBase: <a target="_blank"
+                        <li data-i18n-key="restapisapp-demo-langtools">Java / SpringBoot / h2 database / OpenAPI</li>
+                        <li data-i18n-key="restapisapp-demo-codebase">CodeBase: <a target="_blank"
                                 href="https://github.com/natcobbinah/DiningReviewAPI">DiningReviewAPI</a></li>
-                        <li>Live Demo: Not yet Hosted</li>
+                        <li data-i18n-key="restapisapp-demo-livedemo">Live Demo: Not yet Hosted</li>
                     </ul>
                 </div>
             </div>
@@ -159,16 +173,17 @@
         <div class="project-four">
             <img src="./resources/images/youtube.jpg" alt="youtube">
             <div class="youtube">
-                <h6 aria-label="Youtube Tutorials">Youtube Tutorials <span title="See-More-Info"
-                        class="youtubeAppInfo"><i class="fa-solid fa-angle-right"></i></span></h6>
+                <h6 aria-label="Youtube Tutorials" data-i18n-key="youtube-demo">Youtube Tutorials <span
+                        title="See-More-Info" class="youtubeAppInfo"><i class="fa-solid fa-angle-right"></i></span></h6>
 
                 <div id="youtubeDescription">
-                    <p class="description">The goal of my tutorials is to help solve problems faced
+                    <p class="description" data-i18n-key="youtube-desc">The goal of my tutorials is to help solve
+                        problems faced
                         in development using
                         some of the major frameworks and programming languages.
                     </p>
                     <ul>
-                        <li>Live Demo: <a target="_blank"
+                        <li data-i18n-key="youtube-livedemo">Live Demo: <a target="_blank"
                                 href="https://www.youtube.com/channel/UCk6c_UkHWtlSSrrjK9pUz4w/videos/">Tutorials</a>
                         </li>
                         </li>
@@ -180,21 +195,24 @@
         <div class="project-five">
             <img src="./resources/images/drilling.jpg" alt="directionaDrilling">
             <div class="drilling">
-                <h6 aria-label="Directional Drilling Calculator">Directional Drilling Calculator <span
-                        title="See-More-Info" class="drillingAppInfo"><i class="fa-solid fa-angle-right"></i></span>
+                <h6 aria-label="Directional Drilling Calculator" data-i18n-key="ddrilling-demo">Directional Drilling
+                    Calculator <span title="See-More-Info" class="drillingAppInfo"><i
+                            class="fa-solid fa-angle-right"></i></span>
                 </h6>
 
                 <div id="drillDescription">
-                    <p class="description">Aids in understanding directional drilling for petroleum
+                    <p class="description" data-i18n-key="ddrilling-desc">Aids in understanding directional drilling for
+                        petroleum
                         and earth
                         science engineering majors, focusing on helping to visualize a
                         drill hole and its equivalent estimated measures on field.
                     </p>
                     <ul>
-                        <li>Java / Typescript</li>
-                        <li>NPM Package: <a target="_blank" href="https://www.npmjs.com/package/ddrilling">Directional
+                        <li data-i18n-key="ddrilling-demo-langtools">Java / Typescript</li>
+                        <li data-i18n-key="ddrilling-demo-npm">NPM Package: <a target="_blank"
+                                href="https://www.npmjs.com/package/ddrilling">Directional
                                 Drilling</a></li>
-                        <li>Sourceforge: <a target="_blank"
+                        <li data-i18n-key="ddrilling-demo-sf">Sourceforge: <a target="_blank"
                                 href="https://sourceforge.net/projects/directional-drilling-software/">Directional
                                 Drilling</a>
                         </li>
@@ -206,19 +224,20 @@
         <div class="project-six">
             <img src="./resources/images/misc.png" alt="Braille">
             <div class="braille">
-                <h6 aria-label="Braille Code Generator">Other Projects <span title="See-More-Info"
-                        class="brailleAppInfo"><i class="fa-solid fa-angle-right"></i></span></h6>
+                <h6 aria-label="Braille Code Generator" data-i18n-key="otherProjects-demo">Other Projects <span
+                        title="See-More-Info" class="brailleAppInfo"><i class="fa-solid fa-angle-right"></i></span></h6>
 
                 <div id="brailleDescription">
-                    <p class="description">
+                    <p class="description" data-i18n-key="otherProjects-desc">
                         Have developed other applications hosted on sourceforge/npm including
                         but not limited to brailleCode generators, bulk sms apps.
                     </p>
                     <ul>
-                        <li>Java / Typescript</li>
-                        <li>NPM Packages: <a target="_blank" href="https://www.npmjs.com/~nathaniel_cobbinah">NPM
+                        <li data-i18n-key="otherProjects-demo-langtools">Java / Typescript</li>
+                        <li data-i18n-key="otherProjects-demo-npm">NPM Packages: <a target="_blank"
+                                href="https://www.npmjs.com/~nathaniel_cobbinah">NPM
                             </a></li>
-                        <li>Sourceforge Packages: <a target="_blank"
+                        <li data-i18n-key="otherProjects-demo-sf">Sourceforge Packages: <a target="_blank"
                                 href="https://sourceforge.net/u/fmg3ckali/profile">Sourceforge</a>
                         </li>
                     </ul>
