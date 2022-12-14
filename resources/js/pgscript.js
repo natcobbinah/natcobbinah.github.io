@@ -1,6 +1,9 @@
-const {seoObject} = require('./seoscript');
-import css from  '../css/styles.css';
-import {toggleHiddenDescription} from './showHideTextScript';
+const { seoObject } = require('./seoscript');
+import css from '../css/styles.css';
+import { toggleHiddenDescription } from './showHideTextScript';
+//import i18next from 'i18next';
+//import HttpApi from "i18next-http-backend";
+//import LanguageDetector from "i18next-browser-languagedetector";
 
 //icon buttons 
 let seeMoreofBrailleBtn = document.querySelector('.brailleAppInfo');
@@ -31,7 +34,7 @@ demoAppsMap.set(seeMoreofBrailleBtn, braille_description)
     .set(seeMoreofRestBtn, rest_description)
     .set(seeMoreofHackerNewsBtn, hackerNews_description)
     .set(seeMoreofYelpBusineesAppBtn, yelpBusiness_description)
-    
+
 demoAppsMap.forEach((description, descriptionButtonPress) => {
     descriptionButtonPress.addEventListener('click', () => {
         toggleHiddenDescription(description, descriptionButtonPress)
@@ -39,8 +42,55 @@ demoAppsMap.forEach((description, descriptionButtonPress) => {
 })
 
 
+//page translation (not working efficiently for now, will get back to it later)
+/* async function initI18next() {
+    await i18next
+        .use(HttpApi)
+        .use(LanguageDetector)
+        .init({
+            debug: true,
+            supportedLngs: ["en", "fr"],
+            fallbackLng: "en",
+            nonExplicitSupportedLngs: true,
+            backend: {
+                loadPath: "../js/lang/{{lng}}.json",
+            }
+        });
+}
+
+function translatePageElements() {
+    const translatePageElements = document.querySelectorAll(
+        "[data-i18n-key]",
+    );
+
+    translatePageElements.forEach((el) => {
+        const key = el.getAttribute("data-i18n-key");
+        el.innerHTML = i18next.t(key);
+    })
+}
+
+//select language option
+function bindLocaleSwitcher(initialValue) {
+    const switcher = document.querySelector(
+      "[data-i18n-switcher]",
+    );
+    switcher.value = initialValue;
+    switcher.onchange = (e) => {
+      i18next
+        .changeLanguage(e.target.value)
+        .then(translatePageElements);
+    };
+  }
+  
+
+(async function () {
+    await initI18next();
+    translatePageElements();
+    bindLocaleSwitcher(i18next.resolvedLanguage);
+})();
+ */
 //Load images in html ContentPages using
-//promises to reduce  high BlockingTime 
+//promises to reduce  high BlockingTime
 //when loading images together with pageContent
 /* const loadPageImages = new Map();
 loadPageImages.set("my-picframe", "https://images.unsplash.com/photo-1509475826633-fed577a2c71b?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTh8fGF2YXRhcnN8ZW58MHx8MHx8&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=60 700w")
