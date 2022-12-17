@@ -27,6 +27,10 @@ let hackerNews_description = document.querySelector('.project-one #hackerNewsApp
 let yelpBusiness_description = document.querySelector('.project-two #yelpBusinessAppDescription');
 //let jsonToDartClass_description = document.getElementById('jsonToDartDemoAppDescription');
 
+//hamburger menu in mobile view
+let mobileMenu = document.querySelector("header nav ul li .icon ");
+let mobileMenuElementsToDisplay = document.querySelector("header nav ul li");
+
 const demoAppsMap = new Map();
 demoAppsMap.set(seeMoreofBrailleBtn, braille_description)
     .set(seeMoreofDrillBtn, drill_description)
@@ -39,6 +43,14 @@ demoAppsMap.forEach((description, descriptionButtonPress) => {
     descriptionButtonPress.addEventListener('click', () => {
         toggleHiddenDescription(description, descriptionButtonPress)
     })
+})
+
+mobileMenu.addEventListener('click', () => {
+    if (mobileMenuElementsToDisplay.style.display === "block") {
+        mobileMenuElementsToDisplay.style.display = "none";
+      } else {
+        mobileMenuElementsToDisplay.style.display = "block";
+      }
 })
 
 
