@@ -53,6 +53,28 @@ mobileMenu.addEventListener('click', () => {
       }
 })
 
+//observers for animation on page scroll
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+
+        const skillSetLangImage = entry.target.querySelector('.languages');
+        const skillSetFrameworkImage = entry.target.querySelector('.frameworks');
+        const skillSetDbImage = entry.target.querySelector('.databases');
+
+        if(entry.isIntersecting){
+            skillSetLangImage.classList.add('skillStackListImages');
+            skillSetFrameworkImage.classList.add('skillStackListImages');
+            skillSetDbImage.classList.add('skillStackListImages');
+            return;
+        }
+
+        skillSetLangImage.classList.remove('skillStackListImages');
+        skillSetFrameworkImage.classList.remove('skillStackListImages');
+        skillSetDbImage.classList.remove('skillStackListImages');
+    })
+})
+
+observer.observe(document.querySelector('.stackData'));
 
 //page translation (not working efficiently for now, will get back to it later)
 /* async function initI18next() {
