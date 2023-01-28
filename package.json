@@ -2,7 +2,7 @@
   "name": "githubportfoliopage",
   "version": "1.0.0",
   "description": "My Portfolio Page, showcasing  the love for software development and the adventures encountered through development of sample projects",
-  "main": "resources/js/pgscript.js",
+  "main": "./resources/js/pgscript.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --watch"
@@ -27,8 +27,8 @@
     "webpack-cli": "^4.10.0"
   },
   "dependencies": {
-    "i18next": "^22.4.5",
+    "i18next": "^22.4.9",
     "i18next-browser-languagedetector": "^7.0.1",
-    "i18next-http-backend": "^2.1.0"
+    "i18next-http-backend": "^2.1.1"
   }
 }
