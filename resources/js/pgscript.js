@@ -1,9 +1,12 @@
 const { seoObject } = require('./seoscript');
 import css from '../css/styles.css';
 import { toggleHiddenDescription } from './showHideTextScript';
-//import i18next from 'i18next';
-//import HttpApi from "i18next-http-backend";
-//import LanguageDetector from "i18next-browser-languagedetector";
+import i18next from "i18next";
+import  HttpApi  from "i18next-http-backend";
+import LanguageDetector from "i18next-browser-languagedetector";
+console.log({ i18next })
+import translationEn from '../lang/en.json';
+import translationFr from '../lang/fr.json';
 
 //icon buttons 
 let seeMoreofBrailleBtn = document.querySelector('.brailleAppInfo');
@@ -76,53 +79,63 @@ const observer = new IntersectionObserver(entries => {
 
 observer.observe(document.querySelector('.stackData'));
 
-//page translation (not working efficiently for now, will get back to it later)
-/* async function initI18next() {
+//localization code-stub
+const resources = {
+    en:{
+        translation: translationEn
+    },
+    fr:{
+        translation: translationFr
+    }
+}
+
+const initI18next = async() => {
     await i18next
         .use(HttpApi)
         .use(LanguageDetector)
         .init({
-            debug: true,
-            supportedLngs: ["en", "fr"],
-            fallbackLng: "en",
-            nonExplicitSupportedLngs: true,
-            backend: {
-                loadPath: "../js/lang/{{lng}}.json",
-            }
-        });
+        lng: "en",
+        debug: true,
+        resources,
+        supportedLngs: ["en","fr"],
+        fallbackLng: "en",
+        nonExplicitSupportedLngs: true
+    });
 }
 
-function translatePageElements() {
-    const translatePageElements = document.querySelectorAll(
-        "[data-i18n-key]",
+const translatePageElements = () => {
+    const translatableElements = document.querySelectorAll(
+        "[data-i18n-key]"
     );
 
-    translatePageElements.forEach((el) => {
+    translatableElements.forEach((el) => {
         const key = el.getAttribute("data-i18n-key");
-        el.innerHTML = i18next.t(key);
+        const interpolations = el.getAttribute("data-i18n-opt");
+        const parsedInterpolations = interpolations ? JSON.parse(interpolations) : {};
+        el.innerHTML = i18next.t(key, parsedInterpolations);
     })
 }
 
-//select language option
-function bindLocaleSwitcher(initialValue) {
+const bindLocaleSwitcher = (initialValue) => {
     const switcher = document.querySelector(
-      "[data-i18n-switcher]",
+        "[data-i18n-switcher]"
     );
-    switcher.value = initialValue;
-    switcher.onchange = (e) => {
-      i18next
-        .changeLanguage(e.target.value)
-        .then(translatePageElements);
-    };
-  }
-  
 
-(async function () {
+    switcher.value = initialValue;
+
+    switcher.onchange = (e) => {
+        i18next.changeLanguage(e.target.value)
+               .then(translatePageElements);
+    }
+}
+
+(async function(){
     await initI18next();
     translatePageElements();
     bindLocaleSwitcher(i18next.resolvedLanguage);
 })();
- */
+
+
 //Load images in html ContentPages using
 //promises to reduce  high BlockingTime
 //when loading images together with pageContent
