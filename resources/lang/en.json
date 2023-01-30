@@ -10,7 +10,7 @@
     "yelpBusinessApp-desc":"A ReactJS webApp communicating with the yelpAPI (businessEndpoint), providing an interface for users to search for business and their location, together with other miscellaneous information.",
     "SpringRestAPI-desc":" A diningReview restAPI services built with requirements following user, restaurant and diningReview as entities in its use case. More indepth information on github README.",
     "youtube-desc":"The goal of my tutorials is to help solve problems faced in development using some of the major frameworks and programming languages.",
-    "directionalDrilling-desc":"Aids in understanding directional drilling for petroleum and earth science engineering majors, focusing on helping to visualize a drill hole and its equivalent estimated measures on field.",
+    "directionalDrilling-desc":"This is a login flow app demo with (CRUD) functionalities developed using  React,NodeJS and MongoDB with authentication as well as authorization roles and served with server-side rendering  for individual route access",
     "OtherProjects-desc":"Have developed other applications hosted on sourceforge/npm including but not limited to brailleCode generators, bulk sms apps.",
     "techStackHeader":"TechStack and Familiarities",
     "followMe":"Follow Me on"

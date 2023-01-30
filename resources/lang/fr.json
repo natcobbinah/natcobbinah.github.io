@@ -10,7 +10,7 @@
     "yelpBusinessApp-desc":"Une webApp ReactJS communiquant avec l'API yelp (businessEndpoint), fournissant une interface permettant aux utilisateurs de rechercher des entreprises et leur emplacement, ainsi que d'autres informations diverses.",
     "SpringRestAPI-desc":" Un service restAPI diningReview construit avec les exigences suivantes : utilisateur, restaurant et diningReview comme entités dans son cas d'utilisation. Plus d'informations sur le README de github.",
     "youtube-desc":"L'objectif de mes tutoriels est d'aider à résoudre les problèmes rencontrés lors du développement à l'aide de certains des principaux frameworks et langages de programmation.",
-    "directionalDrilling-desc":"Aide à la compréhension du forage directionnel pour les étudiants en ingénierie pétrolière et en sciences de la terre, en se concentrant sur l'aide à la visualisation d'un trou de forage et de ses mesures estimées équivalentes sur le terrain.",
+    "directionalDrilling-desc":"Il s'agit d'une application de démonstration de flux de connexion avec des fonctionnalités (CRUD) développée à l'aide de  React, NodeJS et MongoDB avec des rôles d'authentification et d'autorisation. et servie avec un rendu côté serveur pour l'accès à la route individuelle.",
     "OtherProjects-desc":"J'ai développé d'autres applications hébergées sur sourceforge/npm, y compris, mais sans s'y limiter, des générateurs de brailleCode, des applications de sms en masse.",
     "techStackHeader":"TechStack et Familiarités",
     "followMe":"Suivez-moi sur"
