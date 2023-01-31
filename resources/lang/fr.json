@@ -4,7 +4,6 @@
     "aboutme-header":"À propos de moi",
     "aboutme-msg-one":" &#127940; En grandissant dès mon plus jeune âge, différentes philosophies ont façonné ma compréhension et ma vision du monde dans ma façon d'aborder un problème ou de penser à sa solution. De l'intérêt personnel (objectivisme) à l'abnégation (pflichterfüllung), j'ai toujours atteint mes objectifs par de petites victoires successives.",
     "aboutme-msg-two":" &#127947; Je suis Cobbinah Nathaniel, un développeur de logiciels avec une formation <b>{{bachelorsCourse}}</b>, et diplômé de <b>l'{{universityBachelors}}</b>. Je possède d'excellentes compétences techniques et une bonne compréhension des processus de développement de logiciels pour répondre aux demandes des clients et du marché en tant que développeur, ainsi qu'une expérience pratique du secteur.",
-    "aboutme-msg-three":" &#127891; Actuellement, j'entreprends mes études de {{degree}} à {{universityMasters}} dans {{mastersCourse}}.",
     "sampleProjects":"Exemples de projets de démonstration",
     "hackerNewsDemo-desc":"Une application web dynamique de flux d'informations interagissant avec hackerNewsApi et imitant les fonctionnalités de hackerNews.",
     "yelpBusinessApp-desc":"Une webApp ReactJS communiquant avec l'API yelp (businessEndpoint), fournissant une interface permettant aux utilisateurs de rechercher des entreprises et leur emplacement, ainsi que d'autres informations diverses.",
