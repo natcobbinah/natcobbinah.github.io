@@ -1,12 +1,16 @@
 const { seoObject } = require('./seoscript');
-import css from '../css/styles.css';
+import '../css/styles.css';
 import { toggleHiddenDescription } from './showHideTextScript';
 import i18next from "i18next";
-import  HttpApi  from "i18next-http-backend";
+import HttpApi from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
-console.log({ i18next })
+//console.log({ i18next })
 import translationEn from '../lang/en.json';
 import translationFr from '../lang/fr.json';
+import JustValidate from 'just-validate';
+import { dictLocale } from '../errors/dictLocale';
+import { sendEmail } from '../../httpEndpoints/api-email';
+import Toastify from 'toastify-js';
 
 //icon buttons 
 let seeMoreofBrailleBtn = document.querySelector('.brailleAppInfo');
@@ -34,6 +38,9 @@ let yelpBusiness_description = document.querySelector('.project-two #yelpBusines
 let mobileMenu = document.querySelector("header nav ul li .icon ");
 let mobileMenuElementsToDisplay = document.querySelector("header nav ul li");
 
+//server response on form submission
+//let serverResponseMsg = document.querySelector(".contact_form  .server_response");
+
 const demoAppsMap = new Map();
 demoAppsMap.set(seeMoreofBrailleBtn, braille_description)
     .set(seeMoreofDrillBtn, drill_description)
@@ -51,56 +58,116 @@ demoAppsMap.forEach((description, descriptionButtonPress) => {
 mobileMenu.addEventListener('click', () => {
     if (mobileMenuElementsToDisplay.style.display === "block") {
         mobileMenuElementsToDisplay.style.display = "none";
-      } else {
+    } else {
         mobileMenuElementsToDisplay.style.display = "block";
-      }
+    }
 })
 
-//observers for animation on page scroll
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
+//parsley formvalidation
+const form = document.forms['getInTouch'];
+form.addEventListener('submit', submitFormData, false);
 
-        const skillSetLangImage = entry.target.querySelector('.languages');
-        const skillSetFrameworkImage = entry.target.querySelector('.frameworks');
-        const skillSetDbImage = entry.target.querySelector('.databases');
+function submitFormData(event) {
+    event.preventDefault();
+    const userMessage = {};
+    userMessage.senderName = form.senderName.value;
+    userMessage.email = form.email.value;
+    userMessage.subject = form.subject.value;
+    userMessage.message = form.message.value;
 
-        if(entry.isIntersecting){
-            skillSetLangImage.classList.add('skillStackListImages');
-            skillSetFrameworkImage.classList.add('skillStackListImages');
-            skillSetDbImage.classList.add('skillStackListImages');
-            return;
+    sendEmail(userMessage).then((data) => {
+        if (data.error) {
+            Toastify({
+                text: data.error,
+                duration: 5000,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                style: {
+                    background: "linear-gradient(to right, #b00015, #fd001e)",
+                }
+            }).showToast();
+            serverResponseMsg.innerHTML = data.error;
+        } else {
+            if (data.message) {
+                Toastify({
+                    text: data.message,
+                    duration: 5000,
+                    gravity: "top", // `top` or `bottom`
+                    position: "right", // `left`, `center` or `right`
+                    style: {
+                        background: "linear-gradient(to right, #00b09b, #96c93d)",
+                    }
+                }).showToast();
+            }
         }
-
-        skillSetLangImage.classList.remove('skillStackListImages');
-        skillSetFrameworkImage.classList.remove('skillStackListImages');
-        skillSetDbImage.classList.remove('skillStackListImages');
     })
-})
+}
 
-observer.observe(document.querySelector('.stackData'));
+/* const validation = new JustValidate(form,undefined,dictLocale);
+validation
+    .addField('#sender_name', [
+        {
+            rule: 'required',
+            errorMessage: 'Sender\'s name is required',
+        },
+        {
+            rule: 'minLength',
+            value: 3,
+        },
+        {
+            rule: 'maxLength',
+            value: 30,
+        },
+    ])
+    .addField('#email', [
+        {
+            rule: 'required',
+            errorMessage: 'Email is required',
+        },
+        {
+            rule: 'email',
+            errorMessage: 'Email is invalid!',
+        },
+    ])
+    .addField('#subject', [
+        {
+            rule: 'required',
+            errorMessage: 'Subject of email required',
+        },
+        {
+            rule: 'minLength',
+            value: 10,
+        },
+        {
+            rule: 'maxLength',
+            value: 100,
+        },
+    ]);
+ */
+
 
 //localization code-stub
 const resources = {
-    en:{
+    en: {
         translation: translationEn
     },
-    fr:{
+    fr: {
         translation: translationFr
     }
 }
 
-const initI18next = async() => {
+const initI18next = async () => {
     await i18next
         .use(HttpApi)
         .use(LanguageDetector)
         .init({
-        lng: "en",
-        debug: true,
-        resources,
-        supportedLngs: ["en","fr"],
-        fallbackLng: "en",
-        nonExplicitSupportedLngs: true
-    });
+            lng: "en",
+            debug: true,
+            resources,
+            supportedLngs: ["en", "fr"],
+            fallbackLng: "en",
+            nonExplicitSupportedLngs: true
+        });
 }
 
 const translatePageElements = () => {
@@ -125,11 +192,11 @@ const bindLocaleSwitcher = (initialValue) => {
 
     switcher.onchange = (e) => {
         i18next.changeLanguage(e.target.value)
-               .then(translatePageElements);
+            .then(translatePageElements);
     }
 }
 
-(async function(){
+(async function () {
     await initI18next();
     translatePageElements();
     bindLocaleSwitcher(i18next.resolvedLanguage);
@@ -162,5 +229,28 @@ loadPageImages.forEach((value, key) => {
         })
         .catch(error => {
             console.log(error)
-        })     
+        })
 }) */
+
+//observers for animation on page scroll
+/* const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+
+        const skillSetLangImage = entry.target.querySelector('.languages');
+        const skillSetFrameworkImage = entry.target.querySelector('.frameworks');
+        const skillSetDbImage = entry.target.querySelector('.databases');
+
+        if(entry.isIntersecting){
+            skillSetLangImage.classList.add('skillStackListImages');
+            skillSetFrameworkImage.classList.add('skillStackListImages');
+            skillSetDbImage.classList.add('skillStackListImages');
+            return;
+        }
+
+        skillSetLangImage.classList.remove('skillStackListImages');
+        skillSetFrameworkImage.classList.remove('skillStackListImages');
+        skillSetDbImage.classList.remove('skillStackListImages');
+    })
+})
+
+observer.observe(document.querySelector('.stackData')); */
