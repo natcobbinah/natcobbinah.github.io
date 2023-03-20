@@ -9,7 +9,7 @@
     <meta name="author" content="Nathaniel Cobbinah" />
     <meta name="google-site-verification" content="3d0HE-JauS3feXTBgO6dEuYtyb3FH-GjTsfewPq-QKA" />
     <title>Nathaniel Cobbinah</title>
-    <!--  <link href="./resources/css/styles.css" rel="stylesheet"> -->
+    <!-- <link href="/resources/css/styles.css" type="text/css" rel="stylesheet">  -->
     <!-- <a href="https://storyset.com/profile">Profile illustrations by Storyset</a> -->
     <!--<a href="https://storyset.com/nature">Nature illustrations by Storyset</a>-->
     <!--<a href="https://iconscout.com/3ds/github" target="_blank">Github 3D Icon</a> by <a href="https://iconscout.com/contributors/dwianggaicon">Dwiangga Design</a> on <a href="https://iconscout.com">IconScout</a>-->
@@ -17,6 +17,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Roboto:wght@300&family=Source+Code+Pro:wght@200&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/48bf10ba77.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!--  <script type="module" src="./resources/js/pgscript.js" defer></script>
     <script src="./resources/js/seoscript.js" async></script> all have been bundled and minified with webpack-->
 </head>
@@ -24,7 +25,7 @@
 <body>
     <div class="container">
         <header>
-            <p class="logoTitle">NatCobbinah</p>
+            <p class="logoTitle">CN</p>
             <!-- <p class="resume"><a
                     href="https://docs.google.com/viewerng/viewer?url=https://github.com/natcobbinah/natcobbinah.github.io/blob/master/resources/resume_and_certs/NATHANIEL_COBBINAH_CV.pdf"
                     target="_blank"><i class="fa-solid fa-book-journal-whills"></i></a><span>CV</span></p> -->
@@ -51,7 +52,6 @@
                 take responsibility for ourselves as well as being erudite, together with a sense of Gezelligheld from
                 my perspective, is what makes us co-exist to achieving a better civilization.
             </p>
-            <p></p>
             <p data-i18n-key="myWelcoming">Hello and Welcome...Let's take a walk</p>
         </div>
 
@@ -60,7 +60,7 @@
         </div>
 
         <div class="my-picframe">
-            <img src="./resources/images/aboutme2.svg" alt="my journey" />
+            <img src="/assets/images/aboutme2.svg" alt="my journey" />
         </div>
 
         <div class="aboutMe-msg" role="presentation">
@@ -82,10 +82,10 @@
                 developer, coupled with hands-on industry-level experience.
             </p>
 
-           <!--  <p data-i18n-key="aboutme-msg-three"
-                data-i18n-opt='{"degree": "Masters", "universityMasters": "Digital College, Paris, France", "mastersCourse":"Information Technology"}'>
-                &#127891; Currently, undertaking my {{degree}} studies at {{universityMasters}} in {{mastersCourse}}.
-            </p> -->
+            <p data-i18n-key="aboutme-msg-three"
+                data-i18n-opt='{"degree": "Masters", "universityMasters": "(Digital College, Paris - France)", "mastersCourse":"Information Technology"}'>
+                &#127891; I am currently a {{degree}} student at {{universityMasters}}, majoring in {{mastersCourse}}.
+            </p>
             <!-- 
             <ul>
                 <li> &#127891; I am a fast learner</li>
@@ -96,13 +96,43 @@
 
         <hr />
 
+        <div class="study_interests_title">
+            <p>Interests</p>
+        </div>
+        <div class="study_interests">
+            <div class="subject math">
+                <img src="assets/images/maths.svg" alt="interest logo - maths" />
+                <p>Maths</p>
+            </div>
+
+            <div class="subject econs">
+                <img src="assets/images/economy.svg" alt="interest logo - economics" />
+                <p>Economics</p>
+            </div>
+
+            <div class="subject philosophy">
+                <img src="assets/images/philosophy.svg" alt="interest logo - philosophy" />
+                <p>Philosophy</p>
+            </div>
+
+            <div class="subject compSci">
+                <img src="assets/images/computer-science.svg" alt="interest logo - computer-science" />
+                <p>Computer Science</p>
+            </div>
+
+            <div class="subject psychology">
+                <img src="assets/images/psychology.svg" alt="interest logo - maths" />
+                <p>Pyschology</p>
+            </div>
+        </div>
+
         <div class="sampleProjects" id="projects" role="presentation">
             <p data-i18n-key="sampleProjects">Sample Demo Projects</p>
         </div>
 
         <!--Sample projects section-->
         <div class="project-one">
-            <img src="./resources/images/hackernews.PNG" alt="hackerNewsApp">
+            <img src="assets/images/hackernews.PNG" alt="hackerNewsApp">
             <div class="hacker-newsApp">
                 <h6 aria-label="HackerNewsApp">HackerNews App Demo <span title="See-More-Info"
                         class="hackerNewsAppInfo"><i class="fa-solid fa-angle-right"></i></span>
@@ -120,17 +150,13 @@
                         <li>Live Demo (HTML,CSS,JS vesion): <a target="_blank"
                                 href="https://fastidious-melba-5320f2.netlify.app">HackerNews</a>
                         </li>
-                        <li>
-                            Live Demo (Angular v15): <a target="_blank"
-                                href="https://farmapp-dc503.web.app/">HackerNews</a>
-                        </li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="project-two">
-            <img src="./resources/images/yelp2.PNG" alt="YelpBusinessAppDemo">
+            <img src="assets/images/yelp2.PNG" alt="YelpBusinessAppDemo">
             <div class="yelp-businessApp">
                 <h6 aria-label="YelpBusinessApp">YelpBusiness-Search Demo <span title="See-More-Info"
                         class="YelpBusinessAppInfo"><i class="fa-solid fa-angle-right"></i></span>
@@ -155,7 +181,7 @@
         </div>
 
         <div class="project-three">
-            <img src="./resources/images/diningReview.PNG" alt="RestAPIs">
+            <img src="assets/images/diningReview.PNG" alt="RestAPIs">
             <div class="restapis">
                 <h6 aria-label="Rest API Services Demo">Rest API-Services Demo <span title="See-More-Info"
                         class="restAppInfo"><i class="fa-solid fa-angle-right"></i></span></h6>
@@ -176,7 +202,7 @@
         </div>
 
         <div class="project-four">
-            <img src="./resources/images/youtube.jpg" alt="youtube">
+            <img src="assets/images/youtube.jpg" alt="youtube">
             <div class="youtube">
                 <h6 aria-label="Youtube Tutorials">Youtube Tutorials <span title="See-More-Info"
                         class="youtubeAppInfo"><i class="fa-solid fa-angle-right"></i></span></h6>
@@ -198,28 +224,30 @@
         </div>
 
         <div class="project-five">
-            <img src="./resources/images/userloginflow.PNG" alt="React Login flow app demo">
+            <img src="assets/images/userloginflow.PNG" alt="React Login flow app demo">
             <div class="drilling">
-                <h6 aria-label="React login Flow App Demo">React Login Flow App Demo <span title="See-More-Info" class="drillingAppInfo"><i
-                            class="fa-solid fa-angle-right"></i></span>
+                <h6 aria-label="React login Flow App Demo">React Login Flow App Demo <span title="See-More-Info"
+                        class="drillingAppInfo"><i class="fa-solid fa-angle-right"></i></span>
                 </h6>
 
                 <div id="drillDescription">
                     <p data-i18n-key="directionalDrilling-desc" class="description">
-                        This is a login flow app demo with (CRUD) functionalities developed using 
+                        This is a login flow app demo with (CRUD) functionalities developed using
                         React,NodeJS and MongoDB with authentication as well as authorization roles
-                        and served with server-side rendering  for individual route access
+                        and served with server-side rendering for individual route access
                     </p>
                     <ul>
                         <li>React / NodeJS / MongoDB</li>
-                        <li>App Demo Youtube <a target="_blank" href="https://youtu.be/goCUtPP-4nQ">React Login Flow App Demo</a></li>
+                        <li>App Demo Youtube <a target="_blank" href="https://youtu.be/goCUtPP-4nQ">React Login Flow
+                                App
+                                Demo</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="project-six">
-            <img src="./resources/images/misc.png" alt="Braille">
+            <img src="assets/images/misc.png" alt="Braille">
             <div class="braille">
                 <h6 aria-label="Braille Code Generator">Other Projects <span title="See-More-Info"
                         class="brailleAppInfo"><i class="fa-solid fa-angle-right"></i></span></h6>
@@ -253,29 +281,65 @@
         <div class="stackData">
             <div class="languages">
                 <!--  <h5>Langugaes</h5> -->
-                <img src="./resources/images/java.svg" alt="java logo">
-                <img src="./resources/images/csharp.svg" alt="java logo">
-                <img src="./resources/images/javascript.svg" alt="javascript logo">
-                <img src="./resources/images/html.svg" alt="html logo">
-                <img src="./resources/images/css3.svg" alt="css logo">
-                <img src="./resources/images/typescript.svg" alt="typescript logo">
-                <img src="./resources/images/dart.svg" alt="dart logo">
+                <img src="assets/images/java.svg" alt="java logo"> 
+                <img src="assets/images/csharp.svg" alt="csharp logo">
+                <img src="assets/images/javascript.svg" alt="javascript logo">
+                <img src="assets/images/php.svg" alt="php logo">
+                <img src="assets/images/typescript.svg" alt="typescript logo">
+                <img src="assets/images/dart.svg" alt="dart logo">
             </div>
             <div class="frameworks">
                 <!--  <h5>Frameworks</h5> -->
-                <img src="./resources/images/spring.svg" alt="springboot logo">
-                <img src="./resources/images/react.svg" alt="react logo">
-                <img src="./resources/images/angular.svg" alt="angular logo">
-                <img src="./resources/images/nodejs.svg" alt="NodeJS logo">
-                <img src="./resources/images/flutter.svg" alt="flutter logo">
+                <img src="assets/images/spring.svg" alt="springboot logo">
+                <img src="assets/images/react.svg" alt="react logo">
+                <img src="assets/images/angular.svg" alt="angular logo">
+                <img src="assets/images/nodejs.svg" alt="NodeJS logo">
+                <img src="assets/images/flutter.svg" alt="flutter logo">
             </div>
             <div class="databases">
                 <!--  <h5>Databases</h5> -->
-                <img src="./resources/images/mongodb.svg" alt="MongoDB logo">
-                <img src="./resources/images/postgresql.svg" alt="PostgreSQL  logo">
-                <img src="./resources/images/mysql.svg" alt="MySQL logo">
-                <img src="./resources/images/docker.svg" alt="Docker logo">
+                <img src="assets/images/mongodb.svg" alt="MongoDB logo">
+                <img src="/assets/images/postgresql.svg" alt="PostgreSQL  logo">
+                <img src="assets/images/mysql.svg" alt="MySQL logo">
+                <img src="./assets/images/docker.svg" alt="Docker logo">
             </div>
+        </div>
+
+        <div class="contact-title">
+            <p>LEAVE A MESSAGE</p>
+        </div>
+
+        <div class="contact_form">
+           <!--  <p class="server_response"></p> -->
+            <form action="" method="post" name="getInTouch">
+                <div class="input-group">
+                    <label for="name">Your Name</label>
+                    <br>
+                    <input type="text" class="form__input form-control" placeholder="Enter your name" autocomplete="off"
+                        name="senderName" id="senderName" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Your Email</label>
+                    <br>
+                    <input type="email" class="form__input form-control" placeholder="Enter your email"
+                        autocomplete="off" name="email" id="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="subject">Subject</label>
+                    <br>
+                    <input type="text" class="form__input form-control" placeholder="Enter subject of email" autocomplete="off"
+                        name="subject" id="subject">
+                </div>
+                <div class="input-group">
+                    <label for="message">Message (Optional) </label>
+                    <br>
+                    <textarea id="message" name="message" rows="8" cols="62" maxlength="600"></textarea>
+                </div>
+                <div class="input-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+
         </div>
 
         <footer>
@@ -297,7 +361,8 @@
             <p class="copyright">&copy All Rights reserved, Nathaniel Cobbinah - (2023)</p>
         </footer>
     </div>
-    <script src="./dist/main.bundle.js"></script>
+    <script src="./dist/main.bundle.js"></script> 
+   <!-- <script src="./resources/js/index.js"></script>  -->
 </body>
 
 </html>
