@@ -2,7 +2,7 @@ const express = require('express')
 import path from 'path'
 const CURRENT_WORKING_DIR = process.cwd();
 require('dotenv').config({ 
-    path: path.join(CURRENT_WORKING_DIR,'./server/.env')
+    path: path.join(CURRENT_WORKING_DIR,'./server/env/.env')
 });
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
