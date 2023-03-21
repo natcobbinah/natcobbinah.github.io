@@ -9,7 +9,8 @@ import translationEn from '../lang/en.json';
 import translationFr from '../lang/fr.json';
 import JustValidate from 'just-validate';
 import { dictLocale } from '../errors/dictLocale';
-import { sendEmail } from '../../httpEndpoints/api-email';
+//import { sendEmail } from '../../httpEndpoints/api-email';
+import sendForm_DataToMail from '../../httpEndpoints/sendEmailApi';
 import Toastify from 'toastify-js';
 
 //icon buttons 
@@ -75,10 +76,10 @@ function submitFormData(event) {
     userMessage.subject = form.subject.value;
     userMessage.message = form.message.value;
 
-    sendEmail(userMessage).then((data) => {
-        if (data.error) {
+    sendForm_DataToMail(userMessage).then((result) => {
+        if (result.data.error) {
             Toastify({
-                text: data.error,
+                text: result.data.error,
                 duration: 5000,
                 gravity: "top", // `top` or `bottom`
                 position: "right", // `left`, `center` or `right`
@@ -88,9 +89,9 @@ function submitFormData(event) {
             }).showToast();
             serverResponseMsg.innerHTML = data.error;
         } else {
-            if (data.message) {
+            if (result.data.message) {
                 Toastify({
-                    text: data.message,
+                    text: result.data.message,
                     duration: 5000,
                     gravity: "top", // `top` or `bottom`
                     position: "right", // `left`, `center` or `right`
