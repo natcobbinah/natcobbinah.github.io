@@ -1,32 +1,19 @@
-const nodemailer = require("nodemailer");
 const  path = require('path');
 const CURRENT_WORKING_DIR = process.cwd();
 require('dotenv').config({ 
     path: path.join(CURRENT_WORKING_DIR,'./server/env/.env')
 });
+
+let {smtpTransport} = require('../services/emailService')
+
 const sendEmail = async (req, res) => {
     //console.log(req.body.email)
     try {
-        let transport = nodemailer.createTransport({
-            service: 'gmail',
-            host: 'smtp.gmail.com',
-            port: 587,
-            secure: false,
-            auth: {
-                user: process.env.USER_EMAIL,
-                pass: process.env.USER_PASS,
-            },
-            tls: {
-                // do not fail on invalid certs
-                rejectUnauthorized: false,
-            },
-        });
-
-        transport.verify( (error, progress) => {
+        smtpTransport.verify( (error, progress) => {
             if (error) {
                 console.log(error);
             } else {
-                //console.log('Server is ready to take our messages');
+                console.log('Server is ready to take our messages');
             }
         });
 
@@ -42,7 +29,7 @@ const sendEmail = async (req, res) => {
                 `
         };
 
-        transport.sendMail(mailOptions, (error, info) => {
+        smtpTransport.sendMail(mailOptions, (error, info) => {
             if (error) {
                 return res.status(400).json({
                     error: "Error sending email! Try again later"

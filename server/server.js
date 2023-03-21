@@ -9,7 +9,6 @@ const cookieParser = require('cookie-parser')
 const compress = require('compression');
 const cors = require('cors');
 const emailRoute = require('./routes/email.routes.js');
-import { ValidateFormData } from './middleware/validateFormEntry.js';
 
 const app = express()
 app.use(bodyParser.json())
@@ -27,8 +26,7 @@ app.get('/', (req,res) => {
 })
 
 //routes
-//form fields validation added as middleware
-app.use('/', ValidateFormData, emailRoute);
+app.use('/', emailRoute);
 
 
 let port = process.env.PORT;
