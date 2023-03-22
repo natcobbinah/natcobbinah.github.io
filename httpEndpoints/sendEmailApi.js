@@ -1,7 +1,7 @@
-import axiosInstance from "./axiosInstance";
+import axios from "axios";
 
-function sendForm_DataToMail(data){
-    return axiosInstance.post("/api/sendMail",data);
+async function sendForm_DataToMail(data){
+    return await axios.post("/api/sendMail",data);
 }
 
 export default sendForm_DataToMail;
