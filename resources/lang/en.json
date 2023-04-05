@@ -4,7 +4,7 @@
     "aboutme-header":"About Me",
     "aboutme-msg-one":"&#127940; Growing up from an early age, different philosophies have shaped my understanding and world outlook in how I approached a problem or thought about its solution. From self-interest(objectivism) to self-sacrifice (pflichterfüllung), I have continuously achieved my objectives with small wins to the next.",
     "aboutme-msg-two":"&#127947;  I am Cobbinah Nathaniel, a software developer with a <b>{{bachelorsCourse}}</b> background, and a graduate of the <b>{{universityBachelors}}</b>. I possess excellent technical skills and an understanding of software development processes to meet the required client and market demands as a developer, coupled with hands-on industry-level experience.",
-    "aboutme-msg-three": "&#127891; I am currently a Masters student at (Digital College, Paris - France), majoring in Information Technology.",
+    "aboutme-msg-three": "&#127891;I am currently a <b>{{degree}}</b> student at <b>{{universityMasters}}</b>, majoring in <b>{{mastersCourse}}</b>. I look forward to joining your corporation to provide value for the company as well as improve myself in my career.",
     "sampleProjects":"Sample Demo Projects",
     "hackerNewsDemo-desc":"A dynamic newsFeed web application interacting with hackerNewsApi and mimicks hackerNews functionalities",
     "yelpBusinessApp-desc":"A ReactJS webApp communicating with the yelpAPI (businessEndpoint), providing an interface for users to search for business and their location, together with other miscellaneous information.",
@@ -13,5 +13,15 @@
     "directionalDrilling-desc":"This is a login flow app demo with (CRUD) functionalities developed using  React,NodeJS and MongoDB with authentication as well as authorization roles and served with server-side rendering  for individual route access",
     "OtherProjects-desc":"Have developed other applications hosted on sourceforge/npm including but not limited to brailleCode generators, bulk sms apps.",
     "techStackHeader":"TechStack and Familiarities",
-    "followMe":"Follow Me on"
+    "followMe":"Follow Me on",
+    "interest-maths": "Maths",
+    "interest-econs": "Economics",
+    "interest-philosophy": "Philosophy",
+    "interest-compSci": "Computer Science",
+    "interest-psychology": "Pyschology",
+    "fast_learner": "&#8986; I am a fast learner",
+    "embrace_change":"&#127867; Embrace changes positively",
+    "take_responsibility":"&#127943; Take responsilbity for my ongoing development",
+    "contactHeader": "LEAVE A MESSAGE"
+
   }
