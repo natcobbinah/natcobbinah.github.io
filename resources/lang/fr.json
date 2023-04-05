@@ -13,5 +13,15 @@
     "directionalDrilling-desc":"Il s'agit d'une application de démonstration de flux de connexion avec des fonctionnalités (CRUD) développée à l'aide de  React, NodeJS et MongoDB avec des rôles d'authentification et d'autorisation. et servie avec un rendu côté serveur pour l'accès à la route individuelle.",
     "OtherProjects-desc":"J'ai développé d'autres applications hébergées sur sourceforge/npm, y compris, mais sans s'y limiter, des générateurs de brailleCode, des applications de sms en masse.",
     "techStackHeader":"TechStack et Familiarités",
-    "followMe":"Suivez-moi sur"
+    "followMe":"Suivez-moi sur",
+    "interest-maths": "Mathématiques",
+    "interest-econs": "Économie",
+    "interest-philosophy": "Philosophie",
+    "interest-compSci": "Informatique",
+    "interest-psychology": "Pyschologie",
+    "fast_learner": "&#8986; J'apprends vite",
+    "embrace_change":"&#127867; Accueillir les changements de manière positive",
+    "take_responsibility":"&#127943; Assumer la responsabilité de mon développement continu",
+    "contactHeader": "LAISSER UN MESSAGE"
+
 }

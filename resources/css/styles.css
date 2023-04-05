@@ -11,7 +11,7 @@ body {
 
 .container {
     display: grid;
-    grid-template: 0.2fr 1fr 0.01fr 1fr 0.01fr 0.5fr 0.1fr 0.8fr 0.8fr 0.8fr 0.02fr 0.8fr 0.2fr/ repeat(12, 1fr);
+    grid-template: 0.2fr 1fr 0.01fr 0.5fr 0.01fr 1fr  0.1fr 0.8fr 0.8fr 0.8fr 0.02fr 0.8fr 0.2fr/ repeat(12, 1fr);
     /*  gap: 15px; */
 }
 
@@ -137,10 +137,11 @@ header nav ul li .icon {
     grid-column: 1 / span 12;
     justify-content: center;
     align-items: center;
-    background-color: #f7f7f7;
+  /*   background-color: #f7f7f7; */
     font-weight: 700;
     text-transform: uppercase;
     font-size: 2rem;
+    color: #472010;
 }
 
 .study_interests{
@@ -149,8 +150,12 @@ header nav ul li .icon {
     grid-column: 1 / span 12;
     grid-template-areas: "a b c d e";
     align-content: center;
-    background-color: #f7f7f7;
+/*     background-color: #f7f7f7; */
     text-align: center;
+}
+
+.study_interests p{
+    color: #472010;
 }
 
 .study_interests .subject img{
@@ -195,12 +200,13 @@ header nav ul li .icon {
     display: block;
 }
 
-/*.aboutMe-msg ul li {
+.aboutMe-msg ul li {
     list-style: none;
     line-height: 2rem;
     font-size: 1.2rem;
     color: #472010;
-}*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 .sampleProjects {
     display: grid;
@@ -212,8 +218,10 @@ header nav ul li .icon {
 }
 
 .about p {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
     color: #472010;
-    font-size: 3rem;
 }
 
 .techStack p {
@@ -326,8 +334,8 @@ ul {
 .stackData .languages img,
 .stackData .frameworks img,
 .stackData .databases img {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     /* animation-duration: 2s;
     animation-name: bounceIn;
     animation: bounceIn 2s ease-in-out; */
@@ -402,12 +410,21 @@ ul {
     margin-left: 0.5rem;
 }
 
-.contact_form .input-group input{
+.contact_form .input-group input:nth-child(-n + 3){
     width: 41rem;
     padding: 0.8rem;
     margin: 0.5rem;
     font-size: 1.2em;
 }
+
+.contact_form .submit-button input{
+    width: 43rem;
+    padding: 0.8rem;
+    margin: 0.5rem;
+    font-size: 1.2em;
+}
+
+
 
 .contact_form .input-group textarea{
     font-size: 1.2em;
