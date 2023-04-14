@@ -7,8 +7,6 @@ import LanguageDetector from "i18next-browser-languagedetector";
 //console.log({ i18next })
 import translationEn from '../lang/en.json';
 import translationFr from '../lang/fr.json';
-import JustValidate from 'just-validate';
-import { dictLocale } from '../errors/dictLocale';
 //import { sendEmail } from '../../httpEndpoints/api-email';
 import sendForm_DataToMail from '../../httpEndpoints/sendEmailApi';
 import Toastify from 'toastify-js';
@@ -21,7 +19,7 @@ let seeMoreofYoutubeBtn = document.querySelector('.youtubeAppInfo');
 let seeMoreofRestBtn = document.querySelector('.restAppInfo');
 //let seeMoreofWriterBtn = document.querySelector('.textWriterAppInfo');
 let seeMoreofHackerNewsBtn = document.querySelector('.hackerNewsAppInfo');
-let seeMoreofYelpBusineesAppBtn = document.querySelector('.YelpBusinessAppInfo');
+let seeMoreofuserAuthFlowAppBtn = document.querySelector('.userAuthFlowAppInfo');
 //let seeMoreofJsonToDartClassAppBtn = document.querySelector('.jsonToDartDemoAppInfo');
 
 //paragraph descriptions
@@ -32,7 +30,7 @@ let youtube_description = document.querySelector('.project-four #youtubeDescript
 let rest_description = document.querySelector('.project-three #restDescription');
 //let textWriter_description = document.getElementById('textWriterDescription');
 let hackerNews_description = document.querySelector('.project-one #hackerNewsAppDescription');
-let yelpBusiness_description = document.querySelector('.project-two #yelpBusinessAppDescription');
+let userAuthFlow_description = document.querySelector('.project-two #userAuthFlowAppDescription');
 //let jsonToDartClass_description = document.getElementById('jsonToDartDemoAppDescription');
 
 //hamburger menu in mobile view
@@ -48,7 +46,7 @@ demoAppsMap.set(seeMoreofBrailleBtn, braille_description)
     .set(seeMoreofYoutubeBtn, youtube_description)
     .set(seeMoreofRestBtn, rest_description)
     .set(seeMoreofHackerNewsBtn, hackerNews_description)
-    .set(seeMoreofYelpBusineesAppBtn, yelpBusiness_description)
+    .set(seeMoreofuserAuthFlowAppBtn, userAuthFlow_description)
 
 demoAppsMap.forEach((description, descriptionButtonPress) => {
     descriptionButtonPress.addEventListener('click', () => {
