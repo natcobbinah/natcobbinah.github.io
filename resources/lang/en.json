@@ -7,7 +7,7 @@
     "aboutme-msg-three": "&#127891;I am currently a <b>{{degree}}</b> student at <b>{{universityMasters}}</b>, majoring in <b>{{mastersCourse}}</b>. I look forward to joining your corporation to provide value for the company as well as improve myself in my career.",
     "sampleProjects":"Sample Demo Projects",
     "hackerNewsDemo-desc":"A dynamic newsFeed web application interacting with hackerNewsApi and mimicks hackerNews functionalities",
-    "userAuthFlow-desc":"A user CRUD and auth functionality implementations (Sign up, User list, Authentication, Protected user profile, and Authorized user edit and delete)",
+    "userAuthFlow-desc":"A SocialMediaApp demo supporting User CRUD and auth functionality implementations (Sign up, User list, Authentication, Protected user profile, and Authorized user edit and delete), posts with image uploads, comments and like, user following and user followers support features",
     "SpringRestAPI-desc":" A diningReview restAPI services built with requirements following user, restaurant and diningReview as entities in its use case. More indepth information on github README.",
     "youtube-desc":"The goal of my tutorials is to help solve problems faced in development using some of the major frameworks and programming languages.",
     "directionalDrilling-desc":"This is a login flow app demo with (CRUD) functionalities developed using  React,NodeJS and MongoDB with authentication as well as authorization roles and served with server-side rendering  for individual route access",
