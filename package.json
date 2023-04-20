@@ -5,6 +5,7 @@
   "main": "./resources/js/pgscript.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "development": "nodemon",
     "build": "webpack --config webpack.config.client.js && webpack  --mode=production --config webpack.config.server.js",
     "start": "node ./dist/server.generated.js"
   },
@@ -40,12 +41,15 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "file-loader": "^6.2.0",
+    "formidable": "^2.1.1",
     "i18next": "^22.4.9",
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-http-backend": "^2.1.1",
     "just-validate": "^4.2.0",
     "node-polyfill-webpack-plugin": "^2.0.1",
     "nodemailer": "^6.9.1",
-    "toastify-js": "^1.12.0"
+    "nodemon": "^2.0.22",
+    "toastify-js": "^1.12.0",
+    "webpack-node-externals": "^3.0.0"
   }
 }

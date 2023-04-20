@@ -62,27 +62,27 @@
         <div class="study_interests">
             <div class="subject math">
                 <img src="assets/images/maths.svg" alt="interest logo - maths" />
-                <p  data-i18n-key="interest-maths">Maths</p>
+                <p data-i18n-key="interest-maths">Maths</p>
             </div>
 
             <div class="subject econs">
                 <img src="assets/images/economics.svg" alt="interest logo - economics" />
-                <p  data-i18n-key="interest-econs">Economics</p>
+                <p data-i18n-key="interest-econs">Economics</p>
             </div>
 
             <div class="subject philosophy">
                 <img src="assets/images/philosophy.svg" alt="interest logo - philosophy" />
-                <p  data-i18n-key="interest-philosophy">Philosophy</p>
+                <p data-i18n-key="interest-philosophy">Philosophy</p>
             </div>
 
             <div class="subject compSci">
                 <img src="assets/images/computer-science.svg" alt="interest logo - computer-science" />
-                <p  data-i18n-key="interest-compSci">Computer Science</p>
+                <p data-i18n-key="interest-compSci">Computer Science</p>
             </div>
 
             <div class="subject psychology">
                 <img src="assets/images/psychology.svg" alt="interest logo - maths" />
-                <p  data-i18n-key="interest-psychology">Pyschology</p>
+                <p data-i18n-key="interest-psychology">Pyschology</p>
             </div>
         </div>
 
@@ -95,7 +95,7 @@
         </div>
 
         <div class="aboutMe-msg" role="presentation">
-           <!--  <p data-i18n-key="aboutme-msg-one">
+            <!--  <p data-i18n-key="aboutme-msg-one">
                 &#127940; Growing up from an early age, different philosophies have shaped my understanding and world
                 outlook in
                 how I approached a problem or thought about its solution.
@@ -115,7 +115,8 @@
 
             <p data-i18n-key="aboutme-msg-three"
                 data-i18n-opt='{"degree": "Masters", "universityMasters": "(Digital College, Paris - France)", "mastersCourse":"Information Technology"}'>
-                &#127891; I am currently a {{degree}} student at {{universityMasters}}, majoring in {{mastersCourse}}. I look forward to joining 
+                &#127891; I am currently a {{degree}} student at {{universityMasters}}, majoring in {{mastersCourse}}. I
+                look forward to joining
                 your corporation to provide value for the company as well as improve myself in my career.
             </p>
             <ul>
@@ -127,7 +128,7 @@
 
         <hr />
 
-       
+
 
         <div class="sampleProjects" id="projects" role="presentation">
             <p data-i18n-key="sampleProjects">Sample Demo Projects</p>
@@ -166,14 +167,16 @@
                 </h6>
 
                 <div id="userAuthFlowAppDescription">
-                    <p data-i18n-key="userAuthFlow-desc" class="description">A SocialMediaApp demo supporting User CRUD and auth functionality implementations
-                        (Sign up, User list, Authentication, Protected user profile, and Authorized user edit and delete), posts with image uploads, comments and 
+                    <p data-i18n-key="userAuthFlow-desc" class="description">A SocialMediaApp demo supporting User CRUD
+                        and auth functionality implementations
+                        (Sign up, User list, Authentication, Protected user profile, and Authorized user edit and
+                        delete), posts with image uploads, comments and
                         like, user following and user followers support features
                     </p>
                     <ul>
                         <li>NodeJS, MongoDB Atlas, ExpressJS, SwaggerAPI, Mongoose</li>
-                        <li>Live Demo: <a target="_blank"
-                                href="https://scarlet-firefly-kilt.cyclic.app/docs">MERN SocialMediaApp Rest API demo </a>
+                        <li>Live Demo: <a target="_blank" href="https://scarlet-firefly-kilt.cyclic.app/docs">MERN
+                                SocialMediaApp Rest API demo </a>
                         </li>
                     </ul>
                 </div>
@@ -281,7 +284,7 @@
         <div class="stackData">
             <div class="languages">
                 <!--  <h5>Langugaes</h5> -->
-                <img src="assets/images/java.svg" alt="java logo"> 
+                <img src="assets/images/java.svg" alt="java logo">
                 <img src="assets/images/csharp.svg" alt="csharp logo">
                 <img src="assets/images/javascript.svg" alt="javascript logo">
                 <img src="assets/images/php.svg" alt="php logo">
@@ -310,30 +313,37 @@
         </div>
 
         <div class="contact_form">
-           <!--  <p class="server_response"></p> -->
-            <form action="" method="post" name="getInTouch">
+            <!--  <p class="server_response"></p> -->
+            <form action="" method="post" name="getInTouch" enctype="multipart/form-data">
                 <div class="input-group">
                     <label for="name">Your Name</label>
                     <br>
-                    <input type="text"  placeholder="Enter your name" autocomplete="off"
-                        name="senderName" id="senderName" required>
+                    <input type="text" placeholder="Enter your name" autocomplete="off" name="senderName"
+                        id="senderName" required>
                 </div>
                 <div class="input-group">
                     <label for="email">Your Email</label>
                     <br>
-                    <input type="email"  placeholder="Enter your email"
-                        autocomplete="off" name="email" id="email" required>
+                    <input type="email" placeholder="Enter your email" autocomplete="off" name="email" id="email"
+                        required>
                 </div>
                 <div class="input-group">
                     <label for="subject">Subject</label>
                     <br>
-                    <input type="text" placeholder="Enter subject of email" autocomplete="off"
-                        name="subject" id="subject">
+                    <input type="text" placeholder="Enter subject of email" autocomplete="off" name="subject"
+                        id="subject">
                 </div>
                 <div class="input-group">
                     <label for="message">Message (Optional) </label>
                     <br>
                     <textarea id="message" name="message" rows="8" cols="62" maxlength="600"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="file">Attachment (Optional) </label>
+                    <br>
+                    <input type="file"
+                        accept="image/*,.pdf, .txt, .doc,.docx,"
+                        id="file" name="file" multiple />
                 </div>
                 <div class="submit-button">
                     <input type="submit" value="Submit">
@@ -361,8 +371,8 @@
             <p class="copyright">&copy All Rights reserved, Nathaniel Cobbinah - (2023)</p>
         </footer>
     </div>
-    <script src="./dist/main.bundle.js"></script> 
-   <!-- <script src="./resources/js/index.js"></script>  -->
+    <script src="./dist/main.bundle.js"></script>
+    <!-- <script src="./resources/js/index.js"></script>  -->
 </body>
 
 </html>

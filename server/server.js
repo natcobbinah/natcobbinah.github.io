@@ -28,11 +28,11 @@ app.get('/', (req,res) => {
 //routes
 app.use('/', emailRoute);
 
-
 let port = process.env.PORT;
 app.listen(port, function onStart(err){
     if(err){
         console.log(err)
     }
     console.info('Server started on port %s.',port)
+    console.info('Site Portfolio available at  http://localhost:%d',port)
 })
