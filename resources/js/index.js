@@ -68,13 +68,10 @@ form.addEventListener('submit', submitFormData, false);
 
 function submitFormData(event) {
     event.preventDefault();
-    const userMessage = {};
-    userMessage.senderName = form.senderName.value;
-    userMessage.email = form.email.value;
-    userMessage.subject = form.subject.value;
-    userMessage.message = form.message.value;
 
-    sendForm_DataToMail(userMessage).then((result) => {
+    let formData = new FormData(form);
+    
+    sendForm_DataToMail([...formData]).then((result) => {
         if (result.data.error) {
             Toastify({
                 text: result.data.error,
@@ -99,50 +96,8 @@ function submitFormData(event) {
                 }).showToast();
             }
         }
-    })
+    })  
 }
-
-/* const validation = new JustValidate(form,undefined,dictLocale);
-validation
-    .addField('#sender_name', [
-        {
-            rule: 'required',
-            errorMessage: 'Sender\'s name is required',
-        },
-        {
-            rule: 'minLength',
-            value: 3,
-        },
-        {
-            rule: 'maxLength',
-            value: 30,
-        },
-    ])
-    .addField('#email', [
-        {
-            rule: 'required',
-            errorMessage: 'Email is required',
-        },
-        {
-            rule: 'email',
-            errorMessage: 'Email is invalid!',
-        },
-    ])
-    .addField('#subject', [
-        {
-            rule: 'required',
-            errorMessage: 'Subject of email required',
-        },
-        {
-            rule: 'minLength',
-            value: 10,
-        },
-        {
-            rule: 'maxLength',
-            value: 100,
-        },
-    ]);
- */
 
 
 //localization code-stub
