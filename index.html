@@ -24,19 +24,18 @@
 
 <body>
     <div class="container">
+
+        <a class="icon"><img src="assets/images/hamburger-menu.svg" alt="icons-hamburger-menu" />
+        </a>
+
         <header>
             <p class="logoTitle">CN</p>
-            <!-- <p class="resume"><a
-                    href="https://docs.google.com/viewerng/viewer?url=https://github.com/natcobbinah/natcobbinah.github.io/blob/master/resources/resume_and_certs/NATHANIEL_COBBINAH_CV.pdf"
-                    target="_blank"><i class="fa-solid fa-book-journal-whills"></i></a><span>CV</span></p> -->
             <nav>
                 <ul role="presentation">
-                    <li><a href="#">Home</a></li>
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#techStack">TechStack</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a class="icon"><i class="fa fa-bars"></i></a></li>
                     <li>
                         <select data-i18n-switcher class="locale-switcher">
                             <option value="en">English</option>
@@ -87,197 +86,121 @@
         </div>
 
         <div class="about" id="about" role="presentation">
-            <p data-i18n-key="aboutme-header"> About Me</p>
+            <p data-i18n-key="aboutme-header">About Me</p>
         </div>
 
-        <div class="my-picframe">
-            <img src="/assets/images/aboutme2.svg" alt="my journey" />
+        <!--about me section-->
+        <div class="aboutMe-section" role="presentation">
+            <div class="card">
+                <div class="aboutme-section-card-photo">
+                    <img src="assets/images/nat_cob.png" alt="Nathaniel">
+                    <h3>Nathaniel Cobbinah</h3>
+                    <p>Digital College - Ms. Information Technology</p>
+                    <p>University of Mines and Tech. - BSc. Comp Sci & Eng</p>
+                </div>
+
+                <div class="aboutme-section-card-content">
+                    <p data-i18n-key="aboutme-msg-one">
+                        Navigating the terrace of the intellectual world, I have always taken
+                        up the gauntlet by following my passion, doing research, practicing by
+                        my volition to improve my proficiency, as well as mentored to
+                        become a better individual and harness my creative prowess within.
+                    <p>
+
+                    <p data-i18n-key="aboutme-msg-two">
+                        I possess good fundamentals, great technical skills and a general
+                        understanding of software development processes to meet the required client
+                        and market demands as a developer, coupled with hands-on industry-level experience
+                        to take a product from its inception to reality within its time-bound.
+                    </p>
+
+                    <ul class="social-media" role="presentation">
+                        <li><a target="_blank" href="https://github.com/natcobbinah">
+                                <img src="assets/images/icons8b-github.svg" alt="github logo">
+                            </a>
+                        </li>
+                        <li><a target="_blank" href="https://www.linkedin.com/in/nathaniel-cobbinah-31611583/">
+                                <img src="assets/images/icons8-linkedin.svg" alt="linkedIn logo"></a>
+                        </li>
+                        <li><a target="_blank" href="https://www.youtube.com/channel/UCk6c_UkHWtlSSrrjK9pUz4w/videos/">
+                                <img src="assets/images/icons8-youtube.svg" alt="youtube logo"></a>
+                        </li>
+                        <li><a target="_blank" href="https://www.npmjs.com/~nathaniel_cobbinah">
+                            <img src="assets/images/icons8-npm.svg" alt="npm logo"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-
-        <div class="aboutMe-msg" role="presentation">
-            <!--  <p data-i18n-key="aboutme-msg-one">
-                &#127940; Growing up from an early age, different philosophies have shaped my understanding and world
-                outlook in
-                how I approached a problem or thought about its solution.
-                From self-interest(objectivism) to self-sacrifice (pflichterfüllung), I have continuously achieved my
-                objectives with small wins to the next.
-            </p>
- -->
-            <p data-i18n-key="aboutme-msg-two"
-                data-i18n-opt='{"bachelorsCourse": "Computer Science and Engineering", "universityBachelors": "University of Mines and Technology, Ghana"}'>
-                &#127947; I am Cobbinah Nathaniel, a software developer with a {{bachelorsCourse}}
-                background, and
-                a graduate of the {{universityBachelors}}. I possess excellent technical skills
-                and
-                an understanding of software development processes to meet the required client and market demands as a
-                developer, coupled with hands-on industry-level experience.
-            </p>
-
-            <p data-i18n-key="aboutme-msg-three"
-                data-i18n-opt='{"degree": "Masters", "universityMasters": "(Digital College, Paris - France)", "mastersCourse":"Information Technology"}'>
-                &#127891; I am currently a {{degree}} student at {{universityMasters}}, majoring in {{mastersCourse}}. I
-                look forward to joining
-                your corporation to provide value for the company as well as improve myself in my career.
-            </p>
-            <ul>
-                <li data-i18n-key="fast_learner"> &#8986; I am a fast learner</li>
-                <li data-i18n-key="embrace_change"> &#127867; Embrace changes positively</li>
-                <li data-i18n-key="take_responsibility"> &#127943; Take responsilbity for my ongoing development</li>
-            </ul>
-        </div>
-
-        <hr />
+        <!--End about me section-->
 
 
-
-        <div class="sampleProjects" id="projects" role="presentation">
+        <div class="sample-projects-header" id="projects" role="presentation">
             <p data-i18n-key="sampleProjects">Sample Demo Projects</p>
         </div>
 
         <!--Sample projects section-->
-        <div class="project-one">
-            <img src="assets/images/hackernews.PNG" alt="hackerNewsApp">
-            <div class="hacker-newsApp">
-                <h6 aria-label="HackerNewsApp">HackerNews App Demo <span title="See-More-Info"
-                        class="hackerNewsAppInfo"><i class="fa-solid fa-angle-right"></i></span>
-                </h6>
+        <div class="sample-projects">
+            <div class="card">
+                <img src="assets/images/hackernews.PNG" alt="Nathaniel" style="width:100%">
+                <h3>HackerNews App</h3>
+                <p data-i18n-key="hackerNewsDemo">A dynamic newsFeed web application interacting with hackerNewsApi and mimicks
+                    hackerNews functionalities
+                </p>
+                <p>Live Demo (HTML,CSS,JS):
+                    <a target="_blank" href="https://fancy-figolla-88077d.netlify.app/">HackerNews
+                    </a>
+                </p>
+            </div>
 
-                <div id="hackerNewsAppDescription">
-                    <p data-i18n-key="hackerNewsDemo-desc" class="description">
-                        A dynamic newsFeed web application interacting with hackerNewsApi and mimicks
-                        hackerNews functionalities
-                    </p>
-                    <ul>
-                        <li>HTML, CSS and JS version & Angular version</li>
-                        <li>CodeBase: <a target="_blank"
-                                href="https://github.com/natcobbinah/HackerNewsApp">HackerNewsApp</a></li>
-                        <li>Live Demo (HTML,CSS,JS vesion): <a target="_blank"
-                                href="https://fancy-figolla-88077d.netlify.app/">HackerNews</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="card">
+                <img src="assets/images/userAuthImg.png" alt="Nathaniel" style="width:100%">
+                <h3>MERN Rest API </h3>
+                <p data-i18n-key="mern-rest-api">A RestAPI demo supporting User CRUD
+                    and auth functionalities
+                    , posts with image uploads, and other features
+                </p>
+                <p>Live Demo:
+                    <a target="_blank" href="https://scarlet-firefly-kilt.cyclic.app/docs">MERN
+                        Rest API demo
+                    </a>
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="assets/images/youtube.jpg" alt="Nathaniel" style="width:100%">
+                <h3>Youtube Tutorials </h3>
+                <p data-i18n-key="youtube-tutorials">Explanation and provision of solutions to
+                    problems faced as well as concepts using
+                    some of the major frameworks and programming languages.
+                </p>
+                <p>Live Demo:
+                    <a target="_blank" href="https://www.youtube.com/channel/UCk6c_UkHWtlSSrrjK9pUz4w/videos/">
+                        Tutorials
+                    </a>
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="assets/images/misc.png" alt="Nathaniel" style="width:100%">
+                <h3>Other Projects </h3>
+                <p data-i18n-key="other-projects">Have developed other applications hosted on sourceforge/npm including
+                    but not limited to directional-drilling calculators,
+                    bulk sms apps etc.
+                </p>
+                <p> Packages:
+                    <a target="_blank" href="https://www.npmjs.com/~nathaniel_cobbinah">
+                        NPM
+                    </a> /
+                    <a target="_blank" href="https://sourceforge.net/u/fmg3ckali/profile">
+                        Sourceforge
+                    </a>
+                </p>
             </div>
         </div>
-
-        <div class="project-two">
-            <img src="assets/images/userAuthImg.png" alt="User_Auth_FlowAppDemo">
-            <div class="User_Auth_FlowApp">
-                <h6 aria-label="userAuthFlowApp">MERN SocialMediaApp Rest API demo <span title="See-More-Info"
-                        class="userAuthFlowAppInfo"><i class="fa-solid fa-angle-right"></i></span>
-                </h6>
-
-                <div id="userAuthFlowAppDescription">
-                    <p data-i18n-key="userAuthFlow-desc" class="description">A SocialMediaApp demo supporting User CRUD
-                        and auth functionality implementations
-                        (Sign up, User list, Authentication, Protected user profile, and Authorized user edit and
-                        delete), posts with image uploads, comments and
-                        like, user following and user followers support features
-                    </p>
-                    <ul>
-                        <li>NodeJS, MongoDB Atlas, ExpressJS, SwaggerAPI, Mongoose</li>
-                        <li>Live Demo: <a target="_blank" href="https://scarlet-firefly-kilt.cyclic.app/docs">MERN
-                                SocialMediaApp Rest API demo </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-three">
-            <img src="assets/images/diningReview.PNG" alt="RestAPIs">
-            <div class="restapis">
-                <h6 aria-label="Rest API Services Demo">Rest API-Services Demo <span title="See-More-Info"
-                        class="restAppInfo"><i class="fa-solid fa-angle-right"></i></span></h6>
-
-                <div id="restDescription">
-                    <p data-i18n-key="SpringRestAPI-desc" class="description">
-                        A diningReview restAPI services built with requirements following user, restaurant
-                        and diningReview as entities in its use case. More indepth information on github README.
-                    </p>
-                    <ul>
-                        <li>Java / SpringBoot / h2 database / OpenAPI</li>
-                        <li>CodeBase: <a target="_blank"
-                                href="https://github.com/natcobbinah/DiningReviewAPI">DiningReviewAPI</a></li>
-                        <li>Live Demo: Not yet Hosted</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-four">
-            <img src="assets/images/youtube.jpg" alt="youtube">
-            <div class="youtube">
-                <h6 aria-label="Youtube Tutorials">Youtube Tutorials <span title="See-More-Info"
-                        class="youtubeAppInfo"><i class="fa-solid fa-angle-right"></i></span></h6>
-
-                <div id="youtubeDescription">
-                    <p data-i18n-key="youtube-desc" class="description">The goal of my tutorials is to help solve
-                        problems faced
-                        in development using
-                        some of the major frameworks and programming languages.
-                    </p>
-                    <ul>
-                        <li>Live Demo: <a target="_blank"
-                                href="https://www.youtube.com/channel/UCk6c_UkHWtlSSrrjK9pUz4w/videos/">Tutorials</a>
-                        </li>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-five">
-            <img src="assets/images/userloginflow.PNG" alt="React Login flow app demo">
-            <div class="drilling">
-                <h6 aria-label="React login Flow App Demo">React Login Flow App Demo <span title="See-More-Info"
-                        class="drillingAppInfo"><i class="fa-solid fa-angle-right"></i></span>
-                </h6>
-
-                <div id="drillDescription">
-                    <p data-i18n-key="directionalDrilling-desc" class="description">
-                        This is a login flow app demo with (CRUD) functionalities developed using
-                        React,NodeJS and MongoDB with authentication as well as authorization roles
-                        and served with server-side rendering for individual route access
-                    </p>
-                    <ul>
-                        <li>React / NodeJS / MongoDB</li>
-                        <li>App Demo Youtube <a target="_blank" href="https://youtu.be/goCUtPP-4nQ">React Login Flow
-                                App
-                                Demo</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-six">
-            <img src="assets/images/misc.png" alt="Braille">
-            <div class="braille">
-                <h6 aria-label="Braille Code Generator">Other Projects <span title="See-More-Info"
-                        class="brailleAppInfo"><i class="fa-solid fa-angle-right"></i></span></h6>
-
-                <div id="brailleDescription">
-                    <p data-i18n-key="OtherProjects-desc" class="description">
-                        Have developed other applications hosted on sourceforge/npm including
-                        but not limited to brailleCode generators, bulk sms apps.
-                    </p>
-                    <ul>
-                        <li>CloudinaryApiUse (TypeScript): <a target="_blank"
-                                href="https://github.com/natcobbinah/cloudinaryApiUse">SourceCode</a>
-                        </li>
-                        <li>NPM Packages: <a target="_blank" href="https://www.npmjs.com/~nathaniel_cobbinah">NPM
-                            </a></li>
-                        <li>Sourceforge Packages: <a target="_blank"
-                                href="https://sourceforge.net/u/fmg3ckali/profile">Sourceforge</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <p></p>
-        </div>
-
         <!--End Sample projects section-->
 
-        <div class="techStack" id="techStack" role="presentation">
+        <div class="techStack-header" id="techStack" role="presentation">
             <p data-i18n-key="techStackHeader">TechStack and Familiarities</p>
         </div>
 
@@ -289,7 +212,7 @@
                 <img src="assets/images/javascript.svg" alt="javascript logo">
                 <img src="assets/images/php.svg" alt="php logo">
                 <img src="assets/images/typescript.svg" alt="typescript logo">
-                <img src="assets/images/dart.svg" alt="dart logo">
+                <img src="assets/images/python.svg" alt="python logo">
             </div>
             <div class="frameworks">
                 <!--  <h5>Frameworks</h5> -->
@@ -336,14 +259,12 @@
                 <div class="input-group">
                     <label for="message">Message (Optional) </label>
                     <br>
-                    <textarea id="message" name="message" rows="8" cols="62" maxlength="600"></textarea>
+                    <textarea id="message" name="message" maxlength="600"></textarea>
                 </div>
                 <div class="input-group">
                     <label for="file">Attachment (Optional) </label>
                     <br>
-                    <input type="file"
-                        accept="image/*,.pdf, .txt, .doc,.docx,"
-                        id="file" name="file" multiple />
+                    <input type="file" accept="image/*,.pdf, .txt, .doc,.docx," id="file" name="file" multiple />
                 </div>
                 <div class="submit-button">
                     <input type="submit" value="Submit">
@@ -355,18 +276,25 @@
         <footer>
             <h2 data-i18n-key="followMe" class="follow-us">Follow Me on</h2>
             <ul class="social-media" role="presentation">
-                <li><a target="_blank" href="https://github.com/natcobbinah"><i class="fa-brands fa-github"></i></a>
+                <li><a target="_blank" href="https://github.com/natcobbinah"><img src="assets/images/icons8-github.svg"
+                            alt="github logo"></a>
                 </li>
-                <li><a target="_blank" href="https://www.youtube.com/channel/UCk6c_UkHWtlSSrrjK9pUz4w/videos/"><i
-                            class="fa-brands fa-youtube"></i></a></li>
-                <li><a target="_blank" href="https://stackoverflow.com/users/15930440/walkingkali/"><i
-                            class="fa-brands fa-stack-overflow"></i></a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/nathaniel-cobbinah-31611583/ "><i
-                            class="fa-brands fa-linkedin"></i></a></li>
-                <li><a target="_blank" href="https://www.npmjs.com/~nathaniel_cobbinah"><i
-                            class="fa-brands fa-npm"></i></a>
+                <li><a target="_blank" href="https://www.youtube.com/channel/UCk6c_UkHWtlSSrrjK9pUz4w/videos/">
+                        <img src="assets/images/icons8-youtube.svg" alt="youtube logo"></a>
                 </li>
-                <li><a target="_blank" href="https://sourceforge.net/u/fmg3ckali/profile">sf</a></li>
+                <li><a target="_blank" href="https://stackoverflow.com/users/15930440/walkingkali/">
+                        <img src="assets/images/icons8-stack-overflow.svg" alt="stackoverflow logo"></a>
+                </li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/nathaniel-cobbinah-31611583/">
+                        <img src="assets/images/icons8-linkedin.svg" alt="linkedIn logo"></a>
+                </li>
+                <li><a target="_blank" href="https://www.npmjs.com/~nathaniel_cobbinah">
+                        <img src="assets/images/icons8-npm.svg" alt="npm logo"></a>
+                </li>
+
+                <li><a target="_blank" href="https://sourceforge.net/u/fmg3ckali/profile">
+                        <img src="assets/images/sourceforge-svgrepo-com.svg" alt="sourceforge logo"></a>
+                </li>
             </ul>
             <p class="copyright">&copy All Rights reserved, Nathaniel Cobbinah - (2023)</p>
         </footer>
