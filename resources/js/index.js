@@ -35,7 +35,6 @@ function submitFormData(event) {
     sendForm_DataToMail([...formData]).then((result) => {
         if (result.data.error) {
             Toastify({
-                text: result.data.error,
                 duration: 5000,
                 gravity: "top", // `top` or `bottom`
                 position: "right", // `left`, `center` or `right`

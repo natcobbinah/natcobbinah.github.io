@@ -16,7 +16,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-style: dotted;
+    /*border-style: dotted;*/
     padding: 1.5rem;
 }
 
@@ -61,7 +61,7 @@ header nav ul li a {
     justify-content: center;
     background-size: cover;
     height: 30rem;
-    border-style: dotted;
+    /*border-style: dotted;*/
     background-image: url("../../assets/images/bannerImg.jpg");
 }
 
@@ -88,7 +88,7 @@ header nav ul li a {
 .contact-title p {
     display: flex;
     justify-content: center;
-    border-style: dotted;
+    /*border-style: dotted;*/
     font-weight: 700;
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -99,7 +99,7 @@ header nav ul li a {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    border-style: dotted;
+    /*border-style: dotted;*/
     text-align: center;
 }
 
@@ -111,7 +111,7 @@ header nav ul li a {
 .about {
     display: flex;
     justify-content: center;
-    border-style: dotted;
+    /*border-style: dotted;*/
 }
 
 .aboutMe-section {
@@ -119,7 +119,7 @@ header nav ul li a {
     align-items: center;
     justify-content: center;
     height: 42rem;
-    border-style: dotted;
+    /*border-style: dotted;*/
 }
 
 .aboutMe-section .card {
@@ -138,6 +138,12 @@ header nav ul li a {
     height: 25rem;
 }
 
+.aboutMe-section .card ul img{
+    width: 3rem;
+    height: 3rem;
+}
+
+
 .aboutme-section-card-photo{
     text-align: center;
 }
@@ -152,6 +158,18 @@ header nav ul li a {
     font-size: 1.2rem;
 }
 
+.aboutme-section-card-content ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.aboutme-section-card-content ul li a{
+    text-decoration: none;
+    padding: 1.5rem;
+}
+
 .sample-projects .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
@@ -162,14 +180,14 @@ header nav ul li a {
 .sample-projects-header {
     display: flex;
     justify-content: center;
-    border-style: dotted;
+    /*border-style: dotted;*/
 }
 
 .sample-projects {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    border-style: dotted;
+    /*border-style: dotted;*/
     padding: 3rem;
 }
 
@@ -178,7 +196,7 @@ header nav ul li a {
     max-width: 300px;
     margin: auto;
     text-align: center;
-    height: 30rem;
+    height: 32rem;
     padding: 2rem;
 }
 
@@ -189,7 +207,7 @@ header nav ul li a {
 .techStack-header {
     display: flex;
     justify-content: center;
-    border-style: dotted;
+    /*border-style: dotted;*/
 }
 
 .techStack-header,
@@ -207,7 +225,7 @@ header nav ul li a {
     display: flex;
     align-items: normal;
     justify-content: space-around;
-    border-style: dotted;
+    /*border-style: dotted;*/
     height: 30rem
 }
 
@@ -239,13 +257,13 @@ header nav ul li a {
 .contact-title {
     display: flex;
     justify-content: center;
-    border-style: dotted;
+    /*border-style: dotted;*/
 }
 
 .contact_form {
     display: flex;
     justify-content: center;
-    border-style: dotted;
+    /*border-style: dotted;*/
 }
 
 .contact_form .input-group input:nth-child(-n + 3) {
@@ -274,11 +292,11 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-style: dotted;
+    /*border-style: dotted;*/
     padding: 0.5rem;
 }
 
-footer .social-media {
+footer .social-media{
     display: flex;
     justify-content: space-around;
     list-style: none;
@@ -360,7 +378,7 @@ footer .social-media li a {
     }
 
     .aboutMe-section {
-        height: 80rem;
+        height: 84rem;
     }
 
     .aboutMe-section .card{
@@ -376,14 +394,14 @@ footer .social-media li a {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         margin: auto;
         text-align: center;
-        height: 33rem;
+        height: 34rem;
     }
 
     .container a.icon {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        border-style: dotted;
+        /*border-style: dotted;*/
     }
 
     .study_interests {
