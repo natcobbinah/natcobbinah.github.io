@@ -50,7 +50,7 @@ header nav ul li a {
     text-decoration: none;
 }
 
-.container a.icon {
+.container .small-screen-header{
     display: none;
 }
 
@@ -170,13 +170,6 @@ header nav ul li a {
     padding: 1.5rem;
 }
 
-.sample-projects .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-}
-
 .sample-projects-header {
     display: flex;
     justify-content: center;
@@ -196,7 +189,7 @@ header nav ul li a {
     max-width: 300px;
     margin: auto;
     text-align: center;
-    height: 32rem;
+    height: 34rem;
     padding: 2rem;
 }
 
@@ -397,11 +390,12 @@ footer .social-media li a {
         height: 34rem;
     }
 
-    .container a.icon {
+    .container .small-screen-header{
         display: flex;
-        justify-content: flex-end;
         align-items: center;
-        /*border-style: dotted;*/
+        justify-content: space-between;
+        padding-left: 0.6rem;
+        padding-right: 0.2rem;
     }
 
     .study_interests {
