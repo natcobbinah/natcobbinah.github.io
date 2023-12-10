@@ -188,6 +188,7 @@ header nav ul li a {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: auto;
+    margin-bottom: 3rem;
     text-align: center;
     height: 34rem;
     padding: 2rem;
@@ -319,6 +320,16 @@ footer .social-media li a {
         flex-direction: column;
     }
 
+    .sample-projects .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        margin-bottom: 3rem;
+        text-align: center;
+        height: 34rem;
+        padding: 2rem;
+    }
+
     .stackData {
         flex-direction: column;
     }
@@ -404,6 +415,16 @@ footer .social-media li a {
 
     .sample-projects {
         flex-direction: column;
+    }
+
+    .sample-projects .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        margin-bottom: 3rem;
+        text-align: center;
+        height: 34rem;
+        padding: 2rem;
     }
 
     .stackData {
