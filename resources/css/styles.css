@@ -50,7 +50,7 @@ header nav ul li a {
     text-decoration: none;
 }
 
-.container .small-screen-header{
+.container .small-screen-header {
     display: none;
 }
 
@@ -77,7 +77,7 @@ header nav ul li a {
 
 /*paragraphs*/
 .subject p,
-.contact_form .input-group label:nth-child(odd){
+.contact_form .input-group label:nth-child(odd) {
     font-size: 1.2rem;
 }
 
@@ -133,41 +133,59 @@ header nav ul li a {
     text-align: center;
 }
 
-.aboutMe-section .card  img{
+.aboutMe-section .card img {
     width: 25rem;
     height: 25rem;
 }
 
-.aboutMe-section .card ul img{
+.aboutMe-section .card ul img {
     width: 3rem;
     height: 3rem;
 }
 
 
-.aboutme-section-card-photo{
+.aboutme-section-card-photo {
     text-align: center;
 }
 
-.aboutme-section-card-content{
+.aboutme-section-card-content {
     text-align: justify;
 }
 
 .aboutme-section-card-photo,
-.aboutme-section-card-content{
-    flex:1;
+.aboutme-section-card-content {
+    flex: 1;
     font-size: 1.2rem;
 }
 
-.aboutme-section-card-content ul{
+.aboutme-section-card-content ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     list-style: none;
 }
 
-.aboutme-section-card-content ul li a{
+.aboutme-section-card-content ul li a {
     text-decoration: none;
     padding: 1.5rem;
+}
+
+.aboutme-section-card-content .contact-nat {
+    text-decoration: none;
+    padding: 1.2rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+    display: flex;
+}
+
+.aboutme-section-card-content .contact-nat a {
+    text-decoration: none;
+    padding: 1.2rem 0 1.2rem 0;
+    padding-left: 2.7rem;
+    padding-right: 2.7rem;
+    border-radius: 5px;
+    background: #f72a0f;
+    color: #fff;
 }
 
 .sample-projects-header {
@@ -290,7 +308,7 @@ footer {
     padding: 0.5rem;
 }
 
-footer .social-media{
+footer .social-media {
     display: flex;
     justify-content: space-around;
     list-style: none;
@@ -361,7 +379,7 @@ footer .social-media li a {
         position: relative;
     }
 
-    header{
+    header {
         padding: 0;
         background-color: #2F1000;
     }
@@ -385,11 +403,11 @@ footer .social-media li a {
         height: 84rem;
     }
 
-    .aboutMe-section .card{
+    .aboutMe-section .card {
         width: 22rem;
     }
 
-    .aboutMe-section .card  img{
+    .aboutMe-section .card img {
         width: 22rem;
         height: 22rem;
     }
@@ -401,7 +419,7 @@ footer .social-media li a {
         height: 34rem;
     }
 
-    .container .small-screen-header{
+    .container .small-screen-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -431,7 +449,7 @@ footer .social-media li a {
         padding: 2rem;
         height: 10rem;
     }
-    
+
     .stackData .languages,
     .stackData .frameworks,
     .stackData .databases {
