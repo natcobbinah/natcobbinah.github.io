@@ -17,7 +17,7 @@ header {
     align-items: center;
     justify-content: space-between;
     /*border-style: dotted;*/
-    padding: 1.5rem;
+    padding: 0.7rem;
 }
 
 header,
@@ -25,12 +25,26 @@ footer {
     background-color: #2F1000;
 }
 
-header p,
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header div p,
 nav ul li a,
 footer h2,
 footer p,
 footer .social-media li a {
     color: #fff;
+}
+
+header div img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    margin-right: 1rem;
 }
 
 header nav ul {
@@ -43,7 +57,7 @@ header nav ul {
 }
 
 header nav ul li {
-    padding: 1em;
+    padding: 0.5rem;
 }
 
 header nav ul li a {
@@ -275,7 +289,7 @@ header nav ul li a {
 .contact_form {
     display: flex;
     justify-content: center;
-    /*border-style: dotted;*/
+    /* border-style: dotted; */
 }
 
 .contact_form .input-group input:nth-child(-n + 3) {
