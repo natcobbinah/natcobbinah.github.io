@@ -1,5 +1,5 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -17,6 +17,10 @@ module.exports = {
                 use: ["style-loader", "css-loader"],
             },
             {
+                test: /\.html$/i,
+                use: 'html-loader'
+            },
+            {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
             },
@@ -25,8 +29,12 @@ module.exports = {
                 type: 'asset/resource',
             },
         ]
-    }, 
+    },
     plugins: [
-        new CleanWebpackPlugin()
+        new HtmlWebpackPlugin({
+            template: 'index.html',
+            filename: 'index.html',
+            inject: true
+        })
     ]
 };

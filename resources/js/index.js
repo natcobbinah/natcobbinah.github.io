@@ -1,5 +1,6 @@
 const { seoObject } = require('./seoscript');
-import '../css/styles.css';
+import css from '../css/styles.css';
+import html from '../../index.html'
 import { toggleHiddenDescription } from './showHideTextScript';
 import i18next from "i18next";
 import HttpApi from "i18next-http-backend";
@@ -16,7 +17,7 @@ let mobileMenuIcon = document.querySelector(".container a.icon");
 let mobileMenuElementsToDisplay = document.querySelector("header nav ul");
 
 mobileMenuIcon.addEventListener('click', () => {
-    if (mobileMenuElementsToDisplay.style.display === "block" ) {
+    if (mobileMenuElementsToDisplay.style.display === "block") {
         mobileMenuElementsToDisplay.style.display = "none";
     } else {
         mobileMenuElementsToDisplay.style.display = "block";
