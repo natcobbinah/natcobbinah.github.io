@@ -74,7 +74,7 @@ header nav ul li a {
     justify-content: center;
     background-size: cover;
     height: 30rem;
-    background-image: url("../../assets/images/bannerImg.jpg");
+    background-image: url(b309126b0c97548b46a5.jpg);
 }
 
 .banner p {
@@ -246,19 +246,19 @@ header nav ul li a {
 }
 
 .stackData .languages {
-    background-image: url("../../assets/images/languages.svg");
+    background-image: url(4fc368d5ba29ba94d980.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .stackData .frameworks {
-    background-image: url("../../assets/images/frameworks.svg");
+    background-image: url(bf0cff8dabe0e91dd0e8.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .stackData .databases {
-    background-image: url("../../assets/images/databases.svg");
+    background-image: url(abab536761b1343fdf25.svg);
     background-repeat: no-repeat;
     background-position: center;
 }

@@ -1,7 +1,7 @@
 const { seoObject } = require('./seoscript');
-import css from '../css/styles.css';
-import html from '../../index.html'
-import { toggleHiddenDescription } from './showHideTextScript';
+import '../css/styles.css';
+import '../../index.html'
+//import { toggleHiddenDescription } from './showHideTextScript';
 import i18next from "i18next";
 import HttpApi from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
