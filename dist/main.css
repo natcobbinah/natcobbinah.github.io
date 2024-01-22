@@ -1,3 +1,6 @@
+/*!****************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./resources/css/styles.css ***!
+  \****************************************************************************/
 html {
     font-size: 15px;
 }
@@ -283,20 +286,24 @@ header nav ul li a {
 .contact_form .input-group input:nth-child(-n + 3) {
     width: 41rem;
     padding: 0.8rem;
-    margin: 0.5rem 0.5rem 0.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
     font-size: 1.2em;
+}
+
+.contact_form input[type=file] {
+    border: 1px solid black;
 }
 
 .contact_form .submit-button input {
     width: 43rem;
     padding: 0.8rem;
-    margin: 0.5rem 0.5rem 0.5rem;
+    margin: 0.5rem 0.5rem 4rem 0;
     font-size: 1.2em;
 }
 
 .contact_form .input-group textarea {
     font-size: 1.2em;
-    width: 43rem;
+    width: 42.5rem;
     height: 10rem;
 }
 
@@ -335,6 +342,10 @@ footer .social-media li a {
 
     .study_interests {
         flex-direction: column;
+    }
+
+    .sample-projects-header p {
+        margin-top: 8rem;
     }
 
     .sample-projects .card {
@@ -411,11 +422,20 @@ footer .social-media li a {
         height: 22rem;
     }
 
-    .sample-projects .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        margin: auto;
-        text-align: center;
-        height: 34rem;
+    .study_interests_title,
+    .about p,
+    .techStack-header p,
+    .contact-title p {
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        color: #2F1000;
+    }
+
+    .sample-projects-header p {
+        margin-top: 8rem;
     }
 
     .container .small-screen-header {
@@ -440,7 +460,7 @@ footer .social-media li a {
         margin: auto;
         margin-bottom: 3rem;
         text-align: center;
-        height: 34rem;
+        height: 38.5rem;
         padding: 2rem;
     }
 
@@ -458,19 +478,19 @@ footer .social-media li a {
     .contact_form .input-group input:nth-child(-n + 3) {
         width: 20rem;
         padding: 0.8rem;
-        margin: 0.5rem;
+        margin: 0.5rem 0.5rem 0.5rem 0;
         font-size: 1.2em;
     }
 
     .contact_form .submit-button input {
-        width: 21rem;
+        width: 21.7rem;
         padding: 0.8rem;
-        margin: 0.5rem;
+        margin: 0.5rem 0.5rem 0.5rem 0;
         font-size: 1.2em;
     }
 
     .contact_form .input-group textarea {
-        width: 22rem;
+        width: 21.5rem;
         height: 10rem;
     }
 }
