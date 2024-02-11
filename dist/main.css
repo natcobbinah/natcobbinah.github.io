@@ -1,6 +1,3 @@
-/*!****************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./resources/css/styles.css ***!
-  \****************************************************************************/
 html {
     font-size: 15px;
 }
@@ -117,8 +114,11 @@ header nav ul li a {
 }
 
 .study_interests .subject img {
-    width: 140px;
-    height: 140px;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 4px 8px 0 rgba(47, 16, 0, 0.438);
+    padding: 2rem;
+    border-radius: 15px;
 }
 
 .about {
@@ -138,7 +138,7 @@ header nav ul li a {
     flex-wrap: wrap;
     padding: 10px;
 
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /*box-shadow: 0 4px 8px 0 rgba(47, 16, 0, 0.185);*/
     width: 80rem;
     margin: auto;
     text-align: center;
@@ -153,7 +153,6 @@ header nav ul li a {
     width: 3rem;
     height: 3rem;
 }
-
 
 .aboutme-section-card-photo {
     text-align: center;
@@ -212,13 +211,14 @@ header nav ul li a {
 }
 
 .sample-projects .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(47, 16, 0, 0.185);
     max-width: 300px;
     margin: auto;
     margin-bottom: 3rem;
     text-align: center;
     height: 34rem;
     padding: 2rem;
+    border-radius: 15px;
 }
 
 .sample-projects .card img {
@@ -269,8 +269,12 @@ header nav ul li a {
 .stackData .languages img,
 .stackData .frameworks img,
 .stackData .databases img {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 8px 0 rgba(47, 16, 0, 0.185);
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 5px;
 }
 
 .contact-title {
@@ -349,7 +353,7 @@ footer .social-media li a {
     }
 
     .sample-projects .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 8px 0 rgba(47, 16, 0, 0.185);
         max-width: 300px;
         margin: auto;
         margin-bottom: 3rem;
@@ -358,8 +362,15 @@ footer .social-media li a {
         padding: 2rem;
     }
 
+    .techStack-header {
+        margin-bottom: 3rem;
+        background-color: #fff;
+    }
+
     .stackData {
         flex-direction: column;
+        margin-bottom: 5rem;
+        background-color: #fff;
     }
 
     .stackData .languages img,
@@ -455,7 +466,7 @@ footer .social-media li a {
     }
 
     .sample-projects .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 8px 0 rgba(47, 16, 0, 0.185);
         max-width: 300px;
         margin: auto;
         margin-bottom: 3rem;
