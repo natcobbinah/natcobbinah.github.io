@@ -3,3 +3,6 @@ My Portfolio Page, showcasing  the love for software development and the adventu
 
 ## Hosted link
 > https://shy-lime-dibbler-garb.cyclic.app/
+Cyclic is down at the moment, so currently hosted on:
+
+> https://natcobbinah.netlify.app/ 
