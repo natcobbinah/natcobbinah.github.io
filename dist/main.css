@@ -155,7 +155,7 @@ header nav ul li a {
 }
 
 .aboutme-section-card-photo {
-    text-align: center;
+    text-align: justify;
 }
 
 .aboutme-section-card-content {
@@ -213,7 +213,7 @@ header nav ul li a {
 .sample-projects .card {
     box-shadow: 0 4px 8px 0 rgba(47, 16, 0, 0.185);
     max-width: 300px;
-    margin: auto;
+    margin: 1rem;
     margin-bottom: 3rem;
     text-align: center;
     height: 34rem;
