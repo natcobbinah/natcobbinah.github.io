@@ -7,6 +7,7 @@ let { smtpTransport } = require('../services/emailService')
 const { IncomingForm } = require('formidable');
 const fs = require("fs")
 
+
 const sendEmail = (req, res) => {
     let options = {
         keepExtensions: true,
@@ -34,7 +35,7 @@ const sendEmail = (req, res) => {
             fileData.forEach((fileObj) => {
                 let parsedFileObjValue = JSON.parse(fileObj);
                 
-                console.log(parsedFileObjValue.filepath)
+                //console.log(parsedFileObjValue.filepath)
 
                 attachmentData.push({
                     content: fs.createReadStream(parsedFileObjValue.filepath),
@@ -64,7 +65,10 @@ const sendEmail = (req, res) => {
         try {
             smtpTransport.verify((error, progress) => {
                 if (error) {
-                    console.log(error);
+                    //console.log(error);
+                    return res.status(400).json({
+                        error: "Error sending email! Try again later"
+                    }) 
                 } else {
                     console.log('Server is ready to take our messages');
                 }

@@ -5,7 +5,10 @@ const verifyFormData = require("../middleware/validateFormEntry.js")
 
 
 router.route('/api/sendMail')
-  .post( emailController.sendEmail);
-  //verifyFormData.ValidateFormData,
+  .post(
+    //verifyFormData.ValidateFormData,
+    emailController.sendEmail
+  );
+//verifyFormData.ValidateFormData,
 
 module.exports = router;

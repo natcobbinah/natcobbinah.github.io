@@ -34,8 +34,10 @@ function submitFormData(event) {
     let formData = new FormData(form);
 
     sendForm_DataToMail([...formData]).then((result) => {
+        
         if (result.data.error) {
             Toastify({
+                text: result.data.error,
                 duration: 5000,
                 gravity: "top", // `top` or `bottom`
                 position: "right", // `left`, `center` or `right`
@@ -43,20 +45,20 @@ function submitFormData(event) {
                     background: "linear-gradient(to right, #b00015, #fd001e)",
                 }
             }).showToast();
-            serverResponseMsg.innerHTML = data.error;
-        } else {
-            if (result.data.message) {
-                Toastify({
-                    text: result.data.message,
-                    duration: 5000,
-                    gravity: "top", // `top` or `bottom`
-                    position: "right", // `left`, `center` or `right`
-                    style: {
-                        background: "linear-gradient(to right, #00b09b, #96c93d)",
-                    }
-                }).showToast();
-            }
         }
+
+        if (result.data.message) {
+            Toastify({
+                text: result.data.message,
+                duration: 5000,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                style: {
+                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                }
+            }).showToast();
+        }
+
     })
 }
 
