@@ -5,8 +5,11 @@ require('dotenv').config({
 });
 let { smtpTransport } = require('../services/emailService')
 const { IncomingForm } = require('formidable');
-const fs = require("fs")
+const fs = require("fs");
 
+// Store user email timestamps (email -> timestamp)
+const emailCooldownMap = new Map();
+const COOLDOWN_PERIOD = 12 * 60 * 60 * 1000; // 12 hours in milliseconds
 
 const sendEmail = (req, res) => {
     let options = {
@@ -18,14 +21,12 @@ const sendEmail = (req, res) => {
     form.parse(req, async (err, fields, files) => {
         if (err) {
             return res.status(400).json({
-                error: "form data could not be uploaded"
+                error: "Form data could not be uploaded"
             })
         }
 
         let attachmentData = [];
         let fileData = [];
-        
-        //console.log(files)
 
         if (files) {
             for (const [key, value] of Object.entries(files)) {
@@ -34,13 +35,11 @@ const sendEmail = (req, res) => {
 
             fileData.forEach((fileObj) => {
                 let parsedFileObjValue = JSON.parse(fileObj);
-                
-                //console.log(parsedFileObjValue.filepath)
 
                 attachmentData.push({
                     content: fs.createReadStream(parsedFileObjValue.filepath),
-                    filename: JSON.stringify(parsedFileObjValue.originalFilename),
-                    contentType: JSON.stringify(parsedFileObjValue.mimetype)
+                    filename: parsedFileObjValue.originalFilename,
+                    contentType: parsedFileObjValue.mimetype
                 })
             })
         }
@@ -57,15 +56,31 @@ const sendEmail = (req, res) => {
             '5': [ 'file' ]
           }*/
 
+        // Extract form fields
         let formFieldValues = [];
         for (const [key, value] of Object.entries(fields)) {
             formFieldValues.push(value[1]);
         }
 
+        const senderEmail = formFieldValues[1];
+
+        // Check if sender is still on cooldown
+        if (emailCooldownMap.has(senderEmail)) {
+            const lastSent = emailCooldownMap.get(senderEmail);
+            const now = Date.now();
+            const timePassed = now - lastSent;
+
+            if (timePassed < COOLDOWN_PERIOD) {
+                const remaining = Math.ceil((COOLDOWN_PERIOD - timePassed) / (1000 * 60 * 60));
+                return res.status(429).json({
+                    error: `You can only send one email every 12 hours. Try again in ${remaining} hour(s).`
+                });
+            }
+        }
+
         try {
-            smtpTransport.verify((error, progress) => {
+            smtpTransport.verify((error) => {
                 if (error) {
-                    //console.log(error);
                     return res.status(400).json({
                         error: "Error sending email! Try again later"
                     }) 
@@ -75,35 +90,44 @@ const sendEmail = (req, res) => {
             });
 
             const mailOptions = {
-                from: formFieldValues[1],
+                from: senderEmail,
                 to: process.env.USER_EMAIL,
                 subject: formFieldValues[2],
                 html: `
-                       Hello, I am a ${formFieldValues[0]},
+                       Hello, I am ${formFieldValues[0]},
                        <p>${formFieldValues[3]}</p>
                        <p>Kind Regards</p>
-                       <p>${formFieldValues[0]}
-                    `,
+                       <p>${formFieldValues[0]}</p>
+                `,
                 attachments: attachmentData
             };
 
             smtpTransport.sendMail(mailOptions, (error, info) => {
                 if (error) {
                     return res.status(400).json({
-                          error: "Error sending email! Try again later"
-                      }) 
+                        error: "Error sending email! Try again later"
+                    }) 
                 } else {
                     console.log('Email sent: ' + info.response);
+
+                    // Save timestamp when email is successfully sent
+                    emailCooldownMap.set(senderEmail, Date.now());
+
+                    // Schedule cleanup after 12 hours
+                    setTimeout(() => {
+                        emailCooldownMap.delete(senderEmail);
+                        console.log(`Cooldown expired for ${senderEmail}`);
+                    }, COOLDOWN_PERIOD);
+
                     return res.status(200).json({
-                         message: "Email sent successfully"
-                     }); 
+                        message: "Email sent successfully"
+                    }); 
                 }
             });
         } catch (err) {
-            //console.log(err)
             return res.status(400).json({
-                 error: "Error sending email!"
-             }) 
+                error: "Error sending email!"
+            }) 
         }
     })
 }

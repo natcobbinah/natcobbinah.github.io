@@ -6,3 +6,5 @@ My Portfolio Page, showcasing  the love for software development and the adventu
   Cyclic is down at the moment, so currently hosted on:
 
 > https://natcobbinah-47d04d79f1c5.herokuapp.com/
+
+> https://natcobbinah.com/

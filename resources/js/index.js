@@ -34,7 +34,7 @@ function submitFormData(event) {
     let formData = new FormData(form);
 
     sendForm_DataToMail([...formData]).then((result) => {
-        
+
         if (result.data.error) {
             Toastify({
                 text: result.data.error,
@@ -59,7 +59,29 @@ function submitFormData(event) {
             }).showToast();
         }
 
-    })
+    }).catch((error) => {
+        if (error.response && error.response.status === 429) {
+            Toastify({
+                text: error.response.data.error || "You’ve reached the email limit. Try again later.",
+                duration: 6000,
+                gravity: "top",
+                position: "right",
+                style: {
+                    background: "linear-gradient(to right, #b00015, #fd001e)",
+                },
+            }).showToast();
+        } else {
+            Toastify({
+                text: "An unexpected error occurred. Please try again.",
+                duration: 6000,
+                gravity: "top",
+                position: "right",
+                style: {
+                    background: "linear-gradient(to right, #b00015, #fd001e)",
+                },
+            }).showToast();
+        }
+    });
 }
 
 
