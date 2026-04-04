@@ -9,8 +9,7 @@
     <meta name="author" content="Nathaniel Cobbinah" />
     <meta name="google-site-verification" content="3d0HE-JauS3feXTBgO6dEuYtyb3FH-GjTsfewPq-QKA" />
     <title>Nathaniel Cobbinah</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Roboto:wght@300&family=Source+Code+Pro:wght@200&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/48bf10ba77.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="assets/images/nat_cob_resized.png">
@@ -19,375 +18,346 @@
 </head>
 
 <body>
-    <div class="container">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-        <div class="small-screen-header">
+    <div class="page-backdrop" aria-hidden="true">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="orb orb-three"></div>
+    </div>
+
+    <div class="container">
+        <div class="small-screen-header glass-shell" role="banner">
             <p>Nathaniel Cobbinah</p>
-            <a class="icon"><img src="assets/images/hamburger-menu.svg" alt="icons-hamburger-menu" />
+            <a class="icon" aria-label="Open navigation menu" role="button" tabindex="0">
+                <img src="assets/images/hamburger-menu.svg" alt="Navigation menu icon" />
             </a>
         </div>
 
-        <header>
-            <div>
+        <header class="glass-shell" role="banner">
+            <div class="brand-wrap">
                 <img src="assets/images/nat_cob_resized.png" alt="Nathaniel">
                 <p class="logoTitle">CN</p>
             </div>
 
-            <nav>
-                <ul role="presentation">
+            <nav aria-label="Main navigation">
+                <ul>
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#techStack">TechStack</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li>
-                        <select data-i18n-switcher class="locale-switcher">
+                        <label for="locale-switcher" class="sr-only">Language</label>
+                        <select id="locale-switcher" data-i18n-switcher class="locale-switcher" aria-label="Language selector">
                             <option value="en">English</option>
-                            <option value="fr">French </option>
+                            <option value="fr">French</option>
                         </select>
                     </li>
                 </ul>
             </nav>
         </header>
 
-        <div class="banner" role="presentation">
-            <p data-i18n-key="myPhilosophy">Be it objectivist epistemology shaping my weltanschauung or pflichterfullung
-                learned as part of my culture growing up, it all boils down to the quality of our lives and how well we
-                take responsibility for ourselves as well as being erudite, together with a sense of Gezelligheld from
-                my perspective, is what makes us co-exist to achieving a better civilization.
-            </p>
-            <p data-i18n-key="myWelcoming">Hello and Welcome...Let's take a walk</p>
-        </div>
+        <main id="main-content">
+            <section class="banner glass-panel" aria-labelledby="philosophy-heading">
+                <h1 id="philosophy-heading" class="sr-only">Personal philosophy</h1>
+                <p data-i18n-key="myPhilosophy">Be it objectivist epistemology shaping my weltanschauung or pflichterfullung
+                    learned as part of my culture growing up, it all boils down to the quality of our lives and how well we
+                    take responsibility for ourselves as well as being erudite, together with a sense of Gezelligheld from
+                    my perspective, is what makes us co-exist to achieving a better civilization.
+                </p>
+                <p data-i18n-key="myWelcoming" class="welcome-copy">Hello and Welcome...Let's take a walk</p>
+            </section>
 
-        <div class="study_interests_title">
-            <p data-i18n-key="interest-title">Interests</p>
-        </div>
-        <div class="study_interests">
-            <div class="subject math">
-                <img src="assets/images/maths_raw.png" alt="interest logo - maths" />
-                <p data-i18n-key="interest-maths">Maths</p>
-            </div>
+            <section aria-labelledby="interest-heading">
+                <div class="study_interests_title">
+                    <h2 id="interest-heading" data-i18n-key="interest-title">Interests</h2>
+                </div>
+                <div class="study_interests">
+                    <article class="subject glass-card">
+                        <img src="assets/images/maths_raw.png" alt="interest logo - maths" />
+                        <p data-i18n-key="interest-maths">Maths</p>
+                    </article>
 
-            <div class="subject econs">
-                <img src="assets/images/economy_raw.png" alt="interest logo - economics" />
-                <p data-i18n-key="interest-econs">Economics</p>
-            </div>
+                    <article class="subject glass-card">
+                        <img src="assets/images/economy_raw.png" alt="interest logo - economics" />
+                        <p data-i18n-key="interest-econs">Economics</p>
+                    </article>
 
-            <div class="subject philosophy">
-                <img src="assets/images/philosophy_raw.png" alt="interest logo - philosophy" />
-                <p data-i18n-key="interest-philosophy">Philosophy</p>
-            </div>
+                    <article class="subject glass-card">
+                        <img src="assets/images/philosophy_raw.png" alt="interest logo - philosophy" />
+                        <p data-i18n-key="interest-philosophy">Philosophy</p>
+                    </article>
 
-            <div class="subject compSci">
-                <img src="assets/images/computer-science_raw.png" alt="interest logo - computer-science" />
-                <p data-i18n-key="interest-compSci">Computer Science</p>
-            </div>
+                    <article class="subject glass-card">
+                        <img src="assets/images/computer-science_raw.png" alt="interest logo - computer-science" />
+                        <p data-i18n-key="interest-compSci">Computer Science</p>
+                    </article>
 
-            <div class="subject psychology">
-                <img src="assets/images/psychology_raw.png" alt="interest logo - psychology" />
-                <p data-i18n-key="interest-psychology">Pyschology</p>
-            </div>
-        </div>
+                    <article class="subject glass-card">
+                        <img src="assets/images/psychology_raw.png" alt="interest logo - psychology" />
+                        <p data-i18n-key="interest-psychology">Pyschology</p>
+                    </article>
+                </div>
+            </section>
 
-        <div class="about" id="about" role="presentation">
-            <p data-i18n-key="aboutme-header">About Me</p>
-        </div>
-
-        <!--about me section-->
-        <div class="aboutMe-section" role="presentation">
-            <div class="card">
-                <div class="aboutme-section-card-photo">
-                    <img src="assets/images/nat_cob.png" alt="Nathaniel">
-                    <h3>Nathaniel Cobbinah</h3>
-                    <p>Isitech, École d’Ingénierie Informatique - Ms. Expert en Systèmes d'Information</p>
-                    <p>Digital College - Ms. Information Technology</p>
-                    <p>University of Mines and Technology. - BSc. Computer Science & Engineering</p>
+            <section id="about" aria-labelledby="about-heading">
+                <div class="about">
+                    <h2 id="about-heading" data-i18n-key="aboutme-header">About Me</h2>
                 </div>
 
-                <div class="aboutme-section-card-content">
-                    <p data-i18n-key="aboutme-msg-one">
-                        Navigating the terrace of the intellectual world, I have always taken
-                        up the gauntlet by following my passion, doing research, practicing by
-                        my volition to improve my proficiency, as well as mentored to
-                        become a better individual and harness my creative prowess within.
-                    <p>
+                <div class="aboutMe-section">
+                    <article class="card glass-panel">
+                        <div class="aboutme-section-card-photo">
+                            <img src="assets/images/nat_cob.png" alt="Nathaniel">
+                            <h3>Nathaniel Cobbinah</h3>
+                            <p>Isitech, Ecole d'Ingenierie Informatique - Ms. Expert en Systemes d'Information</p>
+                            <p>Digital College - Ms. Information Technology</p>
+                            <p>University of Mines and Technology. - BSc. Computer Science & Engineering</p>
+                        </div>
 
-                    <p data-i18n-key="aboutme-msg-two">
-                        I possess great fundamentals with its matching technical skills of software
-                        development processes to meet the required client and market demands as a developer,
-                        realizing a product individually or as part of a team from its inception to market and
-                        within its time-bound, with the goal of increasing revenue and decreasing cost
-                    </p>
+                        <div class="aboutme-section-card-content">
+                            <p data-i18n-key="aboutme-msg-one">
+                                Navigating the terrace of the intellectual world, I have always taken
+                                up the gauntlet by following my passion, doing research, practicing by
+                                my volition to improve my proficiency, as well as mentored to
+                                become a better individual and harness my creative prowess within.
+                            </p>
 
-                    <ul class="social-media" role="presentation">
-                        <li><a target="_blank" href="https://github.com/natcobbinah">
-                                <img src="assets/images/icons8b-github.svg" alt="github logo">
-                            </a>
-                        </li>
-                        <li><a target="_blank" href="https://www.linkedin.com/in/nathaniel-cobbinah-31611583/">
-                                <img src="assets/images/icons8-linkedin.svg" alt="linkedIn logo"></a>
-                        </li>
-                        <li><a target="_blank" href="https://www.youtube.com/channel/UCk6c_UkHWtlSSrrjK9pUz4w/videos/">
-                                <img src="assets/images/icons8-youtube.svg" alt="youtube logo"></a>
-                        </li>
-                        <li><a target="_blank" href="https://www.npmjs.com/~nathaniel_cobbinah">
-                                <img src="assets/images/icons8-npm.svg" alt="npm logo"></a>
-                        </li>
-                    </ul>
+                            <p data-i18n-key="aboutme-msg-two">
+                                I possess great fundamentals with its matching technical skills of software
+                                development processes to meet the required client and market demands as a developer,
+                                realizing a product individually or as part of a team from its inception to market and
+                                within its time-bound, with the goal of increasing revenue and decreasing cost.
+                            </p>
 
-                    <p class="contact-nat">
-                        <a href="#contact">CONTACT</a>
-                    </p>
+                            <ul class="social-media" aria-label="About social links">
+                                <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/natcobbinah">
+                                        <img src="assets/images/icons8b-github.svg" alt="github logo">
+                                    </a>
+                                </li>
+                                <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nathaniel-cobbinah-31611583/">
+                                        <img src="assets/images/icons8-linkedin.svg" alt="linkedIn logo"></a>
+                                </li>
+                                <li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCk6c_UkHWtlSSrrjK9pUz4w/videos/">
+                                        <img src="assets/images/icons8-youtube.svg" alt="youtube logo"></a>
+                                </li>
+                                <li><a target="_blank" rel="noopener noreferrer" href="https://www.npmjs.com/~nathaniel_cobbinah">
+                                        <img src="assets/images/icons8-npm.svg" alt="npm logo"></a>
+                                </li>
+                            </ul>
 
+                            <p class="contact-nat">
+                                <a href="#contact">CONTACT</a>
+                            </p>
+                        </div>
+                    </article>
                 </div>
-            </div>
-        </div>
-        <!--End about me section-->
+            </section>
 
-
-        <div class="sample-projects-header" id="projects" role="presentation">
-            <p data-i18n-key="sampleProjects">Sample Demo Projects</p>
-        </div>
-
-        <!--Sample projects section-->
-        <div class="sample-projects">
-            <div class="card">
-                <img src="assets/images/hackernews.PNG" alt="HackerNews Demo App" style="width:100%">
-                <h3>HackerNews App</h3>
-                <p data-i18n-key="hackerNewsDemo">A dynamic newsFeed web application interacting with hackerNewsApi and
-                    mimicks
-                    hackerNews functionalities
-                </p>
-                <p>Live Demo (HTML,CSS,JS):
-                    <a target="_blank" href="https://voluble-croissant-038e56.netlify.app/">HackerNews
-                    </a>
-                </p>
-                <p>Code:
-                    <a target="_blank" href="https://github.com/natcobbinah/HackerNewsApp">
-                        HackerNews App
-                    </a>
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="assets/images/userAuthImg.png" alt="Mern Rest API Demo" style="width:100%">
-                <h3>MERN Rest API </h3>
-                <p data-i18n-key="mern-rest-api">A RestAPI demo supporting User CRUD
-                    and auth functionalities
-                    , posts with image uploads, and other features
-                </p>
-                <p>Live Demo:
-                    <a target="_blank" href="https://node-restapis-demo-ab1b7c3bb3d2.herokuapp.com/docs">MERN
-                        Rest API demo
-                    </a>
-                </p>
-                <p>Code:
-                    <a target="_blank" href="https://github.com/natcobbinah/MERN_App_APIs">
-                        MERN Rest API Demo
-                    </a>
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="assets/images/arithmetic_expr_calc.PNG" alt="Arithmetic Expression Calculator"
-                    style="width:100%">
-                <h3>Arithmetic Expression Calculator </h3>
-                <p data-i18n-key="arithmetic-expr-calculator">An arithmetic expression calculator supporting PEDMAS
-                    order
-                    of computation as well as generating the Reverse Polish Notation from its (Infix) form.
-                </p>
-                <p>Live Demo:
-                    <a target="_blank" href="https://jolly-starburst-7073ef.netlify.app/">
-                        Calculator
-                    </a> /
-                    <a target="_blank" href="https://www.npmjs.com/package/arithmetic-expr-calculator">
-                        npm library
-                    </a>
-                </p>
-                <p>Code:
-                    <a target="_blank" href="https://github.com/natcobbinah/TypeScript-Calculator-UI">
-                        TypeScript
-                    </a> /
-                    <a target="_blank"
-                        href="https://github.com/natcobbinah/Python_prog/blob/master/python_dsa%20-%20Dr%20Basant%20Agarwal%20et%20al/trees/expression_tree/basic_calculator.py">
-                        Python
-                    </a> /
-                    <a target="_blank" href="https://github.com/natcobbinah/Java-Calculator">
-                        Java
-                    </a>
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="assets/images/colochub-screen.png" alt="Colochub"
-                    style="width:100%">
-                <h3>Colochub</h3>
-                <p data-i18n-key="colochub">
-                    A web platform for managing shared housing, allowing users to browse available apartments, 
-                    view detailed listings, and connect with potential roommates or hosts through a centralized 
-                    interface.
-                </p>
-                <p>Live Demo:
-                    <a target="_blank" href="https://colochub-114868483cb0.herokuapp.com/">
-                        Colochub
-                    </a> 
-                </p>
-                <p>Code:
-                    <a target="_blank" href="https://github.com/natcobbinah/colochub">
-                        Python / Flask
-                    </a> 
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="assets/images/fullstackapp_icon.png" alt="NodeMailer App Demo" style="width:100%">
-                <h3>NodeMailer App Demo </h3>
-                <p data-i18n-key="nodemailer-app-demo">A full-stack application, implementing nodeMailer library
-                    to send email with attachments
-                </p>
-                <p>Live Demo:
-                    <a target="_blank" href="https://nodemailer-app-demo-355b1eafe5aa.herokuapp.com/">NodeMailer App
-                    </a>
-                </p>
-                <p>Code:
-                    <a target="_blank" href="https://github.com/natcobbinah/NodeMailer-full-stack-app-demo">
-                        NodeMailer App Demo
-                    </a>
-                </p>
-                <p> Youtube video:
-                    <a target="_blank" href="https://www.youtube.com/watch?v=VrgpVtNMBEw&t=4654s">
-                        NodeMailer App Video
-                    </a>
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="assets/images/misc.png" alt="Other Projects" style="width:100%">
-                <h3>Other Projects </h3>
-                <p data-i18n-key="other-projects">Have developed other applications hosted on sourceforge/npm including
-                    but not limited to directional-drilling calculators,
-                    bulk sms apps etc.
-                </p>
-                <p> Packages:
-                    <a target="_blank" href="https://www.npmjs.com/~nathaniel_cobbinah">
-                        NPM
-                    </a> /
-                    <a target="_blank" href="https://sourceforge.net/u/fmg3ckali/profile">
-                        Sourceforge
-                    </a>
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="assets/images/youtube.jpg" alt="Youtube Tutorials" style="width:100%">
-                <h3>Youtube Tutorials </h3>
-                <p data-i18n-key="youtube-tutorials">Explanation and provision of solutions to
-                    problems faced as well as concepts using
-                    some of the major frameworks and programming languages.
-                </p>
-                <p>Live Demo:
-                    <a target="_blank" href="https://www.youtube.com/channel/UCk6c_UkHWtlSSrrjK9pUz4w/videos/">
-                        Tutorials
-                    </a>
-                </p>
-            </div>
-        </div>
-        <!--End Sample projects section-->
-
-        <div class="techStack-header" id="techStack" role="presentation">
-            <p data-i18n-key="techStackHeader">TechStack and Familiarities</p>
-        </div>
-
-        <div class="stackData">
-            <div class="languages">
-                <!--  <h5>Langugaes</h5> -->
-                <img src="assets/images/java_raw.png" alt="java logo">
-                <img src="assets/images/javascript_raw.png" alt="javascript logo">
-                <img src="assets/images/typescript_raw.png" alt="typescript logo">
-                <img src="assets/images/python_raw.png" alt="python logo">
-                <!-- <img src="assets/images/csharp.svg" alt="csharp logo"> -->
-                <!--  <img src="assets/images/php.svg" alt="php logo"> -->
-            </div>
-            <div class="frameworks">
-                <!--  <h5>Frameworks</h5> -->
-                <img src="assets/images/flask_raw.png" alt="flask logo">
-                <img src="assets/images/django_raw.png" alt="django logo">
-                <img src="assets/images/spring_raw.png" alt="springboot logo">
-                <img src="assets/images/react_raw.png" alt="react logo">
-                <img src="assets/images/angular_raw.png" alt="angular logo">
-                <img src="assets/images/nodejs_raw.png" alt="NodeJS logo">
-            </div>
-            <div class="databases">
-                <!--  <h5>Databases</h5> -->
-                <img src="assets/images/mongodb_raw.png" alt="MongoDB logo">
-                <img src="/assets/images/postgresql_raw.png" alt="PostgreSQL  logo">
-                <img src="assets/images/mysql_raw.png" alt="MySQL logo">
-                <img src="./assets/images/docker_raw.png" alt="Docker logo">
-            </div>
-        </div>
-
-        <div class="contact-title" id="contact">
-            <p data-i18n-key="contactHeader">LEAVE A MESSAGE</p>
-        </div>
-
-        <div class="contact_form">
-            <!--  <p class="server_response"></p> -->
-            <form action="" method="post" name="getInTouch" enctype="multipart/form-data">
-                <div class="input-group">
-                    <label for="name">Your Name</label>
-                    <br>
-                    <input type="text" placeholder="Enter your name" name="senderName" id="senderName" required>
+            <section aria-labelledby="projects-heading">
+                <div class="sample-projects-header" id="projects">
+                    <h2 id="projects-heading" data-i18n-key="sampleProjects">Sample Demo Projects</h2>
                 </div>
-                <div class="input-group">
-                    <label for="email">Your Email</label>
-                    <br>
-                    <input type="email" placeholder="Enter your email" name="email" id="email" required>
-                </div>
-                <div class="input-group">
-                    <label for="subject">Subject</label>
-                    <br>
-                    <input type="text" placeholder="Enter subject of email" name="subject" id="subject">
-                </div>
-                <div class="input-group">
-                    <label for="message">Message (Optional) </label>
-                    <br>
-                    <textarea id="message" name="message" maxlength="600"></textarea>
-                </div>
-                <div class="input-group">
-                    <label for="file">Attachment (Optional) </label>
-                    <br>
-                    <input type="file" accept="image/*,.pdf, .txt, .doc,.docx," id="file" name="file" multiple />
-                </div>
-                <div class="submit-button">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
 
-        </div>
+                <div class="sample-projects">
+                    <article class="card glass-card">
+                        <img src="assets/images/hackernews.PNG" alt="HackerNews Demo App">
+                        <h3>HackerNews App</h3>
+                        <p data-i18n-key="hackerNewsDemo">A dynamic newsFeed web application interacting with hackerNewsApi and mimicks
+                            hackerNews functionalities.
+                        </p>
+                        <p>Live Demo (HTML,CSS,JS):
+                            <a target="_blank" rel="noopener noreferrer" href="https://voluble-croissant-038e56.netlify.app/">HackerNews</a>
+                        </p>
+                        <p>Code:
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/natcobbinah/HackerNewsApp">HackerNews App</a>
+                        </p>
+                    </article>
 
-        <footer>
+                    <article class="card glass-card">
+                        <img src="assets/images/userAuthImg.png" alt="Mern Rest API Demo">
+                        <h3>MERN Rest API</h3>
+                        <p data-i18n-key="mern-rest-api">A RestAPI demo supporting User CRUD and auth functionalities,
+                            posts with image uploads, and other features.
+                        </p>
+                        <p>Live Demo:
+                            <a target="_blank" rel="noopener noreferrer" href="https://node-restapis-demo-ab1b7c3bb3d2.herokuapp.com/docs">MERN Rest API demo</a>
+                        </p>
+                        <p>Code:
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/natcobbinah/MERN_App_APIs">MERN Rest API Demo</a>
+                        </p>
+                    </article>
+
+                    <article class="card glass-card">
+                        <img src="assets/images/arithmetic_expr_calc.PNG" alt="Arithmetic Expression Calculator">
+                        <h3>Arithmetic Expression Calculator</h3>
+                        <p data-i18n-key="arithmetic-expr-calculator">An arithmetic expression calculator supporting PEDMAS
+                            order of computation as well as generating the Reverse Polish Notation from its (Infix) form.
+                        </p>
+                        <p>Live Demo:
+                            <a target="_blank" rel="noopener noreferrer" href="https://jolly-starburst-7073ef.netlify.app/">Calculator</a> /
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.npmjs.com/package/arithmetic-expr-calculator">npm library</a>
+                        </p>
+                        <p>Code:
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/natcobbinah/TypeScript-Calculator-UI">TypeScript</a> /
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://github.com/natcobbinah/Python_prog/blob/master/python_dsa%20-%20Dr%20Basant%20Agarwal%20et%20al/trees/expression_tree/basic_calculator.py">Python</a> /
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/natcobbinah/Java-Calculator">Java</a>
+                        </p>
+                    </article>
+
+                    <article class="card glass-card">
+                        <img src="assets/images/colochub-screen.png" alt="Colochub">
+                        <h3>Colochub</h3>
+                        <p data-i18n-key="colochub">
+                            A web platform for managing shared housing, allowing users to browse available apartments,
+                            view detailed listings, and connect with potential roommates or hosts through a centralized
+                            interface.
+                        </p>
+                        <p>Live Demo:
+                            <a target="_blank" rel="noopener noreferrer" href="https://colochub-114868483cb0.herokuapp.com/">Colochub</a>
+                        </p>
+                        <p>Code:
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/natcobbinah/colochub">Python / Flask</a>
+                        </p>
+                    </article>
+
+                    <article class="card glass-card">
+                        <img src="assets/images/fullstackapp_icon.png" alt="NodeMailer App Demo">
+                        <h3>NodeMailer App Demo</h3>
+                        <p data-i18n-key="nodemailer-app-demo">A full-stack application, implementing nodeMailer library
+                            to send email with attachments.
+                        </p>
+                        <p>Live Demo:
+                            <a target="_blank" rel="noopener noreferrer" href="https://nodemailer-app-demo-355b1eafe5aa.herokuapp.com/">NodeMailer App</a>
+                        </p>
+                        <p>Code:
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/natcobbinah/NodeMailer-full-stack-app-demo">NodeMailer App Demo</a>
+                        </p>
+                        <p>Youtube video:
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=VrgpVtNMBEw&t=4654s">NodeMailer App Video</a>
+                        </p>
+                    </article>
+
+                    <article class="card glass-card">
+                        <img src="assets/images/misc.png" alt="Other Projects">
+                        <h3>Other Projects</h3>
+                        <p data-i18n-key="other-projects">Have developed other applications hosted on sourceforge/npm including
+                            but not limited to directional-drilling calculators,
+                            bulk sms apps etc.
+                        </p>
+                        <p>Packages:
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.npmjs.com/~nathaniel_cobbinah">NPM</a> /
+                            <a target="_blank" rel="noopener noreferrer" href="https://sourceforge.net/u/fmg3ckali/profile">Sourceforge</a>
+                        </p>
+                    </article>
+
+                    <article class="card glass-card">
+                        <img src="assets/images/youtube.jpg" alt="Youtube Tutorials">
+                        <h3>Youtube Tutorials</h3>
+                        <p data-i18n-key="youtube-tutorials">Explanation and provision of solutions to
+                            problems faced as well as concepts using
+                            some of the major frameworks and programming languages.
+                        </p>
+                        <p>Live Demo:
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCk6c_UkHWtlSSrrjK9pUz4w/videos/">Tutorials</a>
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section aria-labelledby="tech-heading">
+                <div class="techStack-header" id="techStack">
+                    <h2 id="tech-heading" data-i18n-key="techStackHeader">TechStack and Familiarities</h2>
+                </div>
+
+                <div class="stackData">
+                    <article class="languages glass-card">
+                        <h3>Languages</h3>
+                        <img src="assets/images/java_raw.png" alt="java logo">
+                        <img src="assets/images/javascript_raw.png" alt="javascript logo">
+                        <img src="assets/images/typescript_raw.png" alt="typescript logo">
+                        <img src="assets/images/python_raw.png" alt="python logo">
+                    </article>
+
+                    <article class="frameworks glass-card">
+                        <h3>Frameworks</h3>
+                        <img src="assets/images/flask_raw.png" alt="flask logo">
+                        <img src="assets/images/django_raw.png" alt="django logo">
+                        <img src="assets/images/spring_raw.png" alt="springboot logo">
+                        <img src="assets/images/react_raw.png" alt="react logo">
+                        <img src="assets/images/angular_raw.png" alt="angular logo">
+                        <img src="assets/images/nodejs_raw.png" alt="NodeJS logo">
+                    </article>
+
+                    <article class="databases glass-card">
+                        <h3>Databases and Tools</h3>
+                        <img src="assets/images/mongodb_raw.png" alt="MongoDB logo">
+                        <img src="assets/images/postgresql_raw.png" alt="PostgreSQL logo">
+                        <img src="assets/images/mysql_raw.png" alt="MySQL logo">
+                        <img src="assets/images/docker_raw.png" alt="Docker logo">
+                    </article>
+                </div>
+            </section>
+
+            <section aria-labelledby="contact-heading">
+                <div class="contact-title" id="contact">
+                    <h2 id="contact-heading" data-i18n-key="contactHeader">LEAVE A MESSAGE</h2>
+                </div>
+
+                <div class="contact_form">
+                    <form action="" method="post" name="getInTouch" enctype="multipart/form-data" class="glass-panel" aria-label="Contact form">
+                        <div class="input-group">
+                            <label for="senderName">Your Name</label>
+                            <input type="text" placeholder="Enter your name" name="senderName" id="senderName" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" placeholder="Enter your email" name="email" id="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" placeholder="Enter subject of email" name="subject" id="subject">
+                        </div>
+                        <div class="input-group">
+                            <label for="message">Message (Optional)</label>
+                            <textarea id="message" name="message" maxlength="600"></textarea>
+                        </div>
+                        <div class="input-group">
+                            <label for="file">Attachment (Optional)</label>
+                            <input type="file" accept="image/*,.pdf,.txt,.doc,.docx" id="file" name="file" multiple />
+                        </div>
+                        <div class="submit-button">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="glass-shell" role="contentinfo">
             <h2 data-i18n-key="followMe" class="follow-us">Follow Me on</h2>
-            <ul class="social-media" role="presentation">
-                <li><a target="_blank" href="https://github.com/natcobbinah"><img src="assets/images/icons8-github.svg"
+            <ul class="social-media" aria-label="Footer social links">
+                <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/natcobbinah"><img src="assets/images/icons8-github.svg"
                             alt="github logo"></a>
                 </li>
-                <li><a target="_blank" href="https://www.youtube.com/channel/UCk6c_UkHWtlSSrrjK9pUz4w/videos/">
+                <li><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCk6c_UkHWtlSSrrjK9pUz4w/videos/">
                         <img src="assets/images/icons8-youtube.svg" alt="youtube logo"></a>
                 </li>
-                <li><a target="_blank" href="https://stackoverflow.com/users/15930440/walkingkali/">
+                <li><a target="_blank" rel="noopener noreferrer" href="https://stackoverflow.com/users/15930440/walkingkali/">
                         <img src="assets/images/icons8-stack-overflow.svg" alt="stackoverflow logo"></a>
                 </li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/nathaniel-cobbinah-31611583/">
+                <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nathaniel-cobbinah-31611583/">
                         <img src="assets/images/icons8-linkedin.svg" alt="linkedIn logo"></a>
                 </li>
-                <li><a target="_blank" href="https://www.npmjs.com/~nathaniel_cobbinah">
+                <li><a target="_blank" rel="noopener noreferrer" href="https://www.npmjs.com/~nathaniel_cobbinah">
                         <img src="assets/images/icons8-npm.svg" alt="npm logo"></a>
                 </li>
-
-                <li><a target="_blank" href="https://sourceforge.net/u/fmg3ckali/profile">
+                <li><a target="_blank" rel="noopener noreferrer" href="https://sourceforge.net/u/fmg3ckali/profile">
                         <img src="./assets/images/sourceforge-svgrepo-com.svg" alt="sourceforge logo"></a>
                 </li>
             </ul>
-            <p class="copyright">&copy All Rights reserved, Nathaniel Cobbinah - (2025)</p>
+            <p class="copyright">&copy; All Rights reserved, Nathaniel Cobbinah - (2026)</p>
         </footer>
     </div>
 </body>
