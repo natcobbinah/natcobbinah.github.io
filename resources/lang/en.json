@@ -23,5 +23,6 @@
   "embrace_change": "&#127867; Embrace changes positively",
   "take_responsibility": "&#127943; Take responsilbity for my ongoing development",
   "contactHeader": "LEAVE A MESSAGE",
-  "colochub": "A web platform for managing shared housing, allowing users to browse available apartments, view detailed listings, and connect with potential roommates or hosts through a centralized interface."
-}
+  "colochub": "A web platform for managing shared housing, allowing users to browse available apartments, view detailed listings, and connect with potential roommates or hosts through a centralized interface.",
+  "cv_evaluator":"A resume optimization platform that analyzes an uploaded CV against a target job description to generate structured tailoring recommendations. It highlights keyword gaps, ATS-focused guidance, and role-specific improvement suggestions for stronger job applications."
+  }

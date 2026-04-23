@@ -23,5 +23,6 @@
     "embrace_change": "&#127867; Accueillir les changements de manière positive",
     "take_responsibility": "&#127943; Assumer la responsabilité de mon développement continu",
     "contactHeader": "LAISSER UN MESSAGE",
-    "colochub": "Une plateforme web pour la gestion du logement partagé, permettant aux utilisateurs de parcourir les appartements disponibles, de consulter des annonces détaillées et de se connecter avec des colocataires ou des hôtes potentiels via une interface centralisée."
+    "colochub": "Une plateforme web pour la gestion du logement partagé, permettant aux utilisateurs de parcourir les appartements disponibles, de consulter des annonces détaillées et de se connecter avec des colocataires ou des hôtes potentiels via une interface centralisée.",
+    "cv_evaluator":"Une plateforme d'optimisation de CV qui analyse un CV téléchargé par rapport à une offre d'emploi ciblée afin de générer des recommandations personnalisées et structurées. Elle met en évidence les lacunes en matière de mots-clés, fournit des conseils adaptés aux systèmes de suivi des candidatures (ATS) et propose des suggestions d'amélioration spécifiques au poste, pour des candidatures plus convaincantes."
 }
